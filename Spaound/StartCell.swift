@@ -9,9 +9,10 @@ import UIKit
 
 class StartCell: UICollectionViewCell{
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var secondaryLabel: UILabel!
     @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var sliderImageView: UIImageView!
     
 }

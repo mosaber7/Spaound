@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,12 +24,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Skip">
-                                    <color key="titleColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" name="skipButtonColor"/>
                                 </state>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WkQ-y4-ELe">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WkQ-y4-ELe">
                                 <rect key="frame" x="20" y="196" width="374" height="658"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tC2-ky-1nh">
                                     <size key="itemSize" width="386" height="503"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -48,18 +48,20 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="386" height="503"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home1" translatesAutoresizingMaskIntoConstraints="NO" id="hct-3K-EKX">
-                                                            <rect key="frame" x="13" y="0.0" width="360" height="296.5"/>
+                                                            <rect key="frame" x="13" y="0.0" width="360" height="282.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Of-Et-vg0">
-                                                            <rect key="frame" x="0.0" y="304.5" width="386" height="54.5"/>
+                                                            <rect key="frame" x="0.0" y="290.5" width="386" height="47.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxd-04-OSC">
-                                                                    <rect key="frame" x="40" y="0.0" width="306" height="54.5"/>
+                                                                    <rect key="frame" x="40" y="0.0" width="306" height="47.5"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <string key="text">You can find any
 place here</string>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
-                                                                    <color key="textColor" red="0.074509803921568626" green="0.098039215686274508" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" name="mainLabelColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -72,18 +74,18 @@ place here</string>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIw-SW-eId">
-                                                            <rect key="frame" x="0.0" y="367" width="386" height="50"/>
+                                                            <rect key="frame" x="0.0" y="346" width="386" height="47.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFC-TT-Ncf">
-                                                                    <rect key="frame" x="40" y="0.0" width="306" height="50"/>
+                                                                    <rect key="frame" x="40" y="0.0" width="306" height="47.5"/>
                                                                     <string key="text">Good mood good place, let's go!
 Happy day with your favorite mood.</string>
                                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
-                                                                    <color key="textColor" red="0.074509803920000006" green="0.098039215690000001" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" name="secondaryLabelColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="bFC-TT-Ncf" firstAttribute="leading" secondItem="xIw-SW-eId" secondAttribute="leading" constant="40" id="DMh-6R-e2T"/>
                                                                 <constraint firstAttribute="bottom" secondItem="bFC-TT-Ncf" secondAttribute="bottom" id="Z5R-RI-Y5w"/>
@@ -91,21 +93,39 @@ Happy day with your favorite mood.</string>
                                                                 <constraint firstItem="bFC-TT-Ncf" firstAttribute="top" secondItem="xIw-SW-eId" secondAttribute="top" id="zYt-qo-nNO"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwh-Sw-gsp">
-                                                            <rect key="frame" x="0.0" y="425" width="386" height="78"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ky-A2-SDd">
+                                                            <rect key="frame" x="0.0" y="401.5" width="386" height="47.5"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNk-2Y-TfE">
-                                                                    <rect key="frame" x="133" y="0.0" width="120" height="78"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sliderPage1" translatesAutoresizingMaskIntoConstraints="NO" id="VlI-i9-0Ex">
+                                                                    <rect key="frame" x="172.5" y="20" width="41" height="8"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="120" id="zyV-EF-hJe"/>
+                                                                        <constraint firstAttribute="height" constant="8" id="cea-Gr-uDY"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="VlI-i9-0Ex" firstAttribute="centerY" secondItem="8ky-A2-SDd" secondAttribute="centerY" id="At4-PR-oLL"/>
+                                                                <constraint firstAttribute="height" constant="100" id="EAX-9j-A5L"/>
+                                                                <constraint firstItem="VlI-i9-0Ex" firstAttribute="centerX" secondItem="8ky-A2-SDd" secondAttribute="centerX" id="GN3-RR-GtJ"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwh-Sw-gsp">
+                                                            <rect key="frame" x="0.0" y="457" width="386" height="46"/>
+                                                            <subviews>
+                                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNk-2Y-TfE">
+                                                                    <rect key="frame" x="78.5" y="0.0" width="229" height="46"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="55" id="Wdw-I4-HZb"/>
+                                                                        <constraint firstAttribute="width" constant="229" id="zyV-EF-hJe"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
                                                                     <state key="normal" title="Next">
-                                                                        <color key="titleColor" red="0.078431372549019607" green="0.21176470588235294" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="titleColor" name="actionButtonColor"/>
                                                                     </state>
                                                                 </button>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="tNk-2Y-TfE" firstAttribute="centerX" secondItem="zwh-Sw-gsp" secondAttribute="centerX" id="5RE-Gx-cYk"/>
                                                                 <constraint firstItem="tNk-2Y-TfE" firstAttribute="height" secondItem="zwh-Sw-gsp" secondAttribute="height" id="Sna-qN-oYr"/>
@@ -115,9 +135,12 @@ Happy day with your favorite mood.</string>
                                                         </view>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="8ky-A2-SDd" firstAttribute="top" secondItem="xIw-SW-eId" secondAttribute="bottom" constant="8" symbolic="YES" id="3c9-9F-6kX"/>
                                                         <constraint firstItem="hct-3K-EKX" firstAttribute="top" secondItem="fNj-Fe-vnY" secondAttribute="top" id="4qr-ng-UZz"/>
+                                                        <constraint firstItem="8ky-A2-SDd" firstAttribute="leading" secondItem="fNj-Fe-vnY" secondAttribute="leading" id="J0b-OP-hb7"/>
                                                         <constraint firstItem="zwh-Sw-gsp" firstAttribute="leading" secondItem="fNj-Fe-vnY" secondAttribute="leading" id="VOd-3B-rSx"/>
                                                         <constraint firstAttribute="trailing" secondItem="zwh-Sw-gsp" secondAttribute="trailing" id="gS7-7u-rry"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8ky-A2-SDd" secondAttribute="trailing" id="r0l-H6-AXG"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
@@ -131,16 +154,17 @@ Happy day with your favorite mood.</string>
                                         <size key="customSize" width="386" height="503"/>
                                         <connections>
                                             <outlet property="actionButton" destination="tNk-2Y-TfE" id="RjC-YP-Map"/>
-                                            <outlet property="imageView" destination="hct-3K-EKX" id="K9B-n5-jBK"/>
+                                            <outlet property="mainImageView" destination="hct-3K-EKX" id="K9B-n5-jBK"/>
                                             <outlet property="mainLabel" destination="Bxd-04-OSC" id="7Cx-x3-KO2"/>
                                             <outlet property="secondaryLabel" destination="bFC-TT-Ncf" id="m6w-7S-vQK"/>
+                                            <outlet property="sliderImageView" destination="VlI-i9-0Ex" id="kG3-v9-5QA"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WkQ-y4-ELe" secondAttribute="bottom" constant="8" id="2Z7-dz-2OR"/>
                             <constraint firstItem="WkQ-y4-ELe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="340-FB-RR0"/>
@@ -161,11 +185,21 @@ Happy day with your favorite mood.</string>
     </scenes>
     <resources>
         <image name="home1" width="360" height="297"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiarySystemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="sliderPage1" width="41" height="6"/>
+        <namedColor name="actionButtonColor">
+            <color red="0.078000001609325409" green="0.21199999749660492" blue="0.63899999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainLabelColor">
+            <color red="0.075000002980232239" green="0.097999997437000275" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryLabelColor">
+            <color red="0.46700000762939453" green="0.46700000762939453" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="skipButtonColor">
+            <color red="0.46700000762939453" green="0.46700000762939453" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
