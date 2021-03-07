@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0512904E25F51F8D00681273 /* StartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512904D25F51F8D00681273 /* StartCell.swift */; };
 		0512905725F5510400681273 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512905625F5510400681273 /* HomeViewController.swift */; };
+		057597EC25F57DDF0029E2B3 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057597EB25F57DDF0029E2B3 /* LoginFormViewController.swift */; };
+		057597EF25F580ED0029E2B3 /* RegisterFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057597EE25F580ED0029E2B3 /* RegisterFormViewController.swift */; };
+		057597F225F583390029E2B3 /* VerifyPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057597F125F583390029E2B3 /* VerifyPhoneViewController.swift */; };
+		057597F525F5846C0029E2B3 /* RestorePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057597F425F5846C0029E2B3 /* RestorePasswordViewController.swift */; };
 		05A2EEB125F4EDEB008BEE2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2EEB025F4EDEB008BEE2F /* AppDelegate.swift */; };
 		05A2EEB325F4EDEB008BEE2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2EEB225F4EDEB008BEE2F /* SceneDelegate.swift */; };
 		05A2EEB525F4EDEB008BEE2F /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2EEB425F4EDEB008BEE2F /* OnBoardingViewController.swift */; };
@@ -20,6 +24,10 @@
 /* Begin PBXFileReference section */
 		0512904D25F51F8D00681273 /* StartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCell.swift; sourceTree = "<group>"; };
 		0512905625F5510400681273 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		057597EB25F57DDF0029E2B3 /* LoginFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
+		057597EE25F580ED0029E2B3 /* RegisterFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormViewController.swift; sourceTree = "<group>"; };
+		057597F125F583390029E2B3 /* VerifyPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneViewController.swift; sourceTree = "<group>"; };
+		057597F425F5846C0029E2B3 /* RestorePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordViewController.swift; sourceTree = "<group>"; };
 		05A2EEAD25F4EDEB008BEE2F /* Spaound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spaound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A2EEB025F4EDEB008BEE2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05A2EEB225F4EDEB008BEE2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +77,10 @@
 				05A2EEBE25F4EDEC008BEE2F /* Info.plist */,
 				0512904D25F51F8D00681273 /* StartCell.swift */,
 				0512905625F5510400681273 /* HomeViewController.swift */,
+				057597EB25F57DDF0029E2B3 /* LoginFormViewController.swift */,
+				057597EE25F580ED0029E2B3 /* RegisterFormViewController.swift */,
+				057597F125F583390029E2B3 /* VerifyPhoneViewController.swift */,
+				057597F425F5846C0029E2B3 /* RestorePasswordViewController.swift */,
 			);
 			path = Spaound;
 			sourceTree = "<group>";
@@ -143,6 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057597F225F583390029E2B3 /* VerifyPhoneViewController.swift in Sources */,
+				057597F525F5846C0029E2B3 /* RestorePasswordViewController.swift in Sources */,
+				057597EC25F57DDF0029E2B3 /* LoginFormViewController.swift in Sources */,
+				057597EF25F580ED0029E2B3 /* RegisterFormViewController.swift in Sources */,
 				0512905725F5510400681273 /* HomeViewController.swift in Sources */,
 				0512904E25F51F8D00681273 /* StartCell.swift in Sources */,
 				05A2EEB525F4EDEB008BEE2F /* OnBoardingViewController.swift in Sources */,

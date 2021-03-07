@@ -20,7 +20,12 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func loginTapped(_ sender: Any) {
-        print("presssssedd")
+        let loginFormVC = self.storyboard?.instantiateViewController(identifier: "LoginForm") as! LoginFormViewController
+        loginFormVC.modalPresentationStyle = .fullScreen
+        self.present(loginFormVC, animated: true, completion: nil)
+        
+        
+        
     }
     
     @objc func registerTapped(_ sender: UITapGestureRecognizer){
