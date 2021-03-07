@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0512904E25F51F8D00681273 /* StartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512904D25F51F8D00681273 /* StartCell.swift */; };
+		0512905725F5510400681273 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512905625F5510400681273 /* HomeViewController.swift */; };
 		05A2EEB125F4EDEB008BEE2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2EEB025F4EDEB008BEE2F /* AppDelegate.swift */; };
 		05A2EEB325F4EDEB008BEE2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2EEB225F4EDEB008BEE2F /* SceneDelegate.swift */; };
-		05A2EEB525F4EDEB008BEE2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2EEB425F4EDEB008BEE2F /* ViewController.swift */; };
+		05A2EEB525F4EDEB008BEE2F /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2EEB425F4EDEB008BEE2F /* OnBoardingViewController.swift */; };
 		05A2EEB825F4EDEB008BEE2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A2EEB625F4EDEB008BEE2F /* Main.storyboard */; };
 		05A2EEBA25F4EDEC008BEE2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A2EEB925F4EDEC008BEE2F /* Assets.xcassets */; };
 		05A2EEBD25F4EDEC008BEE2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A2EEBB25F4EDEC008BEE2F /* LaunchScreen.storyboard */; };
@@ -18,10 +19,11 @@
 
 /* Begin PBXFileReference section */
 		0512904D25F51F8D00681273 /* StartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCell.swift; sourceTree = "<group>"; };
+		0512905625F5510400681273 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		05A2EEAD25F4EDEB008BEE2F /* Spaound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spaound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A2EEB025F4EDEB008BEE2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05A2EEB225F4EDEB008BEE2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05A2EEB425F4EDEB008BEE2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05A2EEB425F4EDEB008BEE2F /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		05A2EEB725F4EDEB008BEE2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05A2EEB925F4EDEC008BEE2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05A2EEBC25F4EDEC008BEE2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,12 +62,13 @@
 			children = (
 				05A2EEB025F4EDEB008BEE2F /* AppDelegate.swift */,
 				05A2EEB225F4EDEB008BEE2F /* SceneDelegate.swift */,
-				05A2EEB425F4EDEB008BEE2F /* ViewController.swift */,
+				05A2EEB425F4EDEB008BEE2F /* OnBoardingViewController.swift */,
 				05A2EEB625F4EDEB008BEE2F /* Main.storyboard */,
 				05A2EEB925F4EDEC008BEE2F /* Assets.xcassets */,
 				05A2EEBB25F4EDEC008BEE2F /* LaunchScreen.storyboard */,
 				05A2EEBE25F4EDEC008BEE2F /* Info.plist */,
 				0512904D25F51F8D00681273 /* StartCell.swift */,
+				0512905625F5510400681273 /* HomeViewController.swift */,
 			);
 			path = Spaound;
 			sourceTree = "<group>";
@@ -140,8 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0512905725F5510400681273 /* HomeViewController.swift in Sources */,
 				0512904E25F51F8D00681273 /* StartCell.swift in Sources */,
-				05A2EEB525F4EDEB008BEE2F /* ViewController.swift in Sources */,
+				05A2EEB525F4EDEB008BEE2F /* OnBoardingViewController.swift in Sources */,
 				05A2EEB125F4EDEB008BEE2F /* AppDelegate.swift in Sources */,
 				05A2EEB325F4EDEB008BEE2F /* SceneDelegate.swift in Sources */,
 			);
