@@ -1,0 +1,6 @@
+framework module Pods_Spaound {
+  umbrella header "Pods-Spaound-umbrella.h"
+
+  export *
+  module * { export * }
+}
