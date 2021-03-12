@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zw8-gC-N2D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QL0-Bx-bfl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -282,6 +282,7 @@ is an easy task with us.</string>
                     </view>
                     <navigationItem key="navigationItem" id="7BQ-qp-cao"/>
                     <connections>
+                        <outlet property="loginButton" destination="OVS-kn-L7i" id="GTE-ba-4aY"/>
                         <outlet property="registerLabel" destination="Tzd-OU-nPF" id="ms0-0Y-2x3"/>
                         <segue destination="Kc4-0Z-r6X" kind="show" id="0aA-r4-EP1"/>
                     </connections>
@@ -289,22 +290,6 @@ is an easy task with us.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgf-yR-mev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1286.9565217391305" y="-871.20535714285711"/>
-        </scene>
-        <!--Item 2-->
-        <scene sceneID="T6B-we-nbj">
-            <objects>
-                <viewController id="PvK-nH-ADe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PI4-kX-6HO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="OFl-U0-bvY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="nAX-dv-Ajo"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xmV-4c-wHf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="472" y="1079"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8zN-t1-Qkt">
@@ -314,10 +299,13 @@ is an easy task with us.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="blueToRedColor"/>
+                        <color key="selectedImageTintColor" name="secondaryLabelColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="PvK-nH-ADe" kind="relationship" relationship="viewControllers" id="oWV-8j-ycy"/>
                         <segue destination="HgS-th-0Ai" kind="relationship" relationship="viewControllers" id="gPM-Pf-CEC"/>
+                        <segue destination="0IQ-jc-PQI" kind="relationship" relationship="viewControllers" id="Xe7-IP-QlO"/>
+                        <segue destination="blC-DT-Zkk" kind="relationship" relationship="viewControllers" id="PzG-yu-NCl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVR-ga-EyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -419,12 +407,87 @@ is an easy task with us.</string>
                         <color key="badgeColor" name="actionButtonColor"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="popularSpacesTV" destination="x0L-PP-e3B" id="GV7-1b-Td1"/>
                         <outlet property="rcmndedSpcsCollectionView" destination="CWa-F4-u89" id="C8c-WQ-pzP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IyA-RT-DVr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="551" y="434"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="iCc-Rs-EX0">
+            <objects>
+                <viewController id="blC-DT-Zkk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kPZ-J1-EPM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2T-fx-iOx">
+                                <rect key="frame" x="149.5" y="80" width="115" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xl9-Et-YaM">
+                                        <rect key="frame" x="0.0" y="1.5" width="115" height="147"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="blueToRedColor"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="8kG-R4-WRI"/>
+                                    <constraint firstAttribute="height" constant="150" id="EXr-3E-fXh"/>
+                                    <constraint firstItem="xl9-Et-YaM" firstAttribute="leading" secondItem="V2T-fx-iOx" secondAttribute="leading" id="EdV-Af-nVx"/>
+                                    <constraint firstAttribute="trailing" secondItem="xl9-Et-YaM" secondAttribute="trailing" id="ZS5-zG-BNw"/>
+                                    <constraint firstAttribute="bottom" secondItem="xl9-Et-YaM" secondAttribute="bottom" id="ihv-PW-hNW"/>
+                                    <constraint firstItem="xl9-Et-YaM" firstAttribute="top" secondItem="V2T-fx-iOx" secondAttribute="top" id="kSy-J4-n4o"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Mo Saber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvZ-y7-bKN">
+                                <rect key="frame" x="108" y="254" width="198" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="32"/>
+                                <color key="textColor" name="tableViewCellName"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfU-zV-zez">
+                                <rect key="frame" x="36" y="733" width="342" height="40"/>
+                                <color key="backgroundColor" name="textFieldColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Sign Out"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TAJ-t2-igA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TAJ-t2-igA" firstAttribute="bottom" secondItem="pfU-zV-zez" secondAttribute="bottom" constant="40" id="0d3-YQ-R1S"/>
+                            <constraint firstItem="pfU-zV-zez" firstAttribute="leading" secondItem="TAJ-t2-igA" secondAttribute="leading" constant="36" id="2Wz-WB-fAt"/>
+                            <constraint firstItem="V2T-fx-iOx" firstAttribute="centerX" secondItem="kPZ-J1-EPM" secondAttribute="centerX" id="D2y-ei-rR1"/>
+                            <constraint firstItem="TAJ-t2-igA" firstAttribute="trailing" secondItem="pfU-zV-zez" secondAttribute="trailing" constant="36" id="GYg-eB-ASL"/>
+                            <constraint firstItem="V2T-fx-iOx" firstAttribute="top" secondItem="TAJ-t2-igA" secondAttribute="top" constant="36" id="Nt5-0h-4pf"/>
+                            <constraint firstItem="xvZ-y7-bKN" firstAttribute="centerX" secondItem="kPZ-J1-EPM" secondAttribute="centerX" id="Vng-pU-bWm"/>
+                            <constraint firstItem="xvZ-y7-bKN" firstAttribute="top" secondItem="V2T-fx-iOx" secondAttribute="bottom" constant="24" id="w8g-zI-KOC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="XaU-Hf-gyJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rsn-eR-Acq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-382" y="1388"/>
+        </scene>
+        <!--Find-->
+        <scene sceneID="Rl9-qr-HRn">
+            <objects>
+                <viewController id="0IQ-jc-PQI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FcM-bX-EBK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="361-li-o6f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Find" selectedImage="location.circle.fill" catalog="system" id="Xo2-wC-PQf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gt7-lz-93g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708" y="1100"/>
         </scene>
         <!--Login Form View Controller-->
         <scene sceneID="WEY-VY-sQw">
@@ -544,6 +607,7 @@ and book your time at your favorite space.</string>
                     <navigationItem key="navigationItem" id="31r-uW-9Qy"/>
                     <connections>
                         <outlet property="emailTextField" destination="yG3-l7-AqA" id="wUP-cY-IVh"/>
+                        <outlet property="loginButton" destination="YOC-aK-sHZ" id="ith-Ad-q4M"/>
                         <outlet property="passwordTextField" destination="pnf-oS-a7B" id="GEG-Ne-JcZ"/>
                         <outlet property="resetPasswordLabel" destination="YtZ-Ky-8WO" id="Sli-NF-GmG"/>
                         <segue destination="Bm9-fI-774" kind="show" id="tk4-hd-Y2r"/>
@@ -670,6 +734,7 @@ and book your time at your favorite space.</string>
                     </view>
                     <navigationItem key="navigationItem" id="DGO-K0-9q1"/>
                     <connections>
+                        <outlet property="continueButton" destination="EnN-j9-xGt" id="kio-rW-DnR"/>
                         <outlet property="emailTextField" destination="nI7-9c-f2p" id="Jnc-5b-yTa"/>
                         <outlet property="passwordTextField" destination="4rl-2u-T7W" id="cLN-QS-S1t"/>
                         <outlet property="phoneTextField" destination="xgc-hj-cPO" id="OSE-VU-m03"/>
@@ -808,6 +873,9 @@ spaces can contact you easily.</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1qH-xE-xx3"/>
+                    <connections>
+                        <outlet property="createAccountButton" destination="lTx-Db-5qy" id="M4G-j6-PGI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mg-C3-L5K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -889,6 +957,9 @@ and you’ll be able to reset your password.</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jju-Us-frf"/>
+                    <connections>
+                        <outlet property="resetPasswordButton" destination="sF0-iU-awL" id="368-Zu-pCx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSI-jc-7u6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -900,7 +971,9 @@ and you’ll be able to reset your password.</string>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="home1" width="360" height="297"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="location.circle.fill" catalog="system" width="128" height="121"/>
         <image name="logo" width="80" height="73"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="seeAllArrow" width="17" height="15"/>
         <image name="sliderPage1" width="41" height="6"/>
         <namedColor name="actionButtonColor">
@@ -923,6 +996,9 @@ and you’ll be able to reset your password.</string>
         </namedColor>
         <namedColor name="skipButtonColor">
             <color red="0.46700000762939453" green="0.46700000762939453" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tableViewCellName">
+            <color red="0.019607843137254902" green="0.0039215686274509803" blue="0.32156862745098036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textFieldColor">
             <color red="0.94900000095367432" green="0.96100002527236938" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

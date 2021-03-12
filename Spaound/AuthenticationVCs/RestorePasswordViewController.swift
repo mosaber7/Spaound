@@ -9,10 +9,14 @@ import UIKit
 
 class RestorePasswordViewController: UIViewController {
 
+    @IBOutlet weak var resetPasswordButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        resetPasswordButton.layer.cornerRadius = 16
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

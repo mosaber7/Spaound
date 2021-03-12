@@ -13,11 +13,14 @@ class RegisterFormViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var continueButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+    }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        continueButton.layer.cornerRadius = 16
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

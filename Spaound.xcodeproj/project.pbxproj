@@ -15,6 +15,8 @@
 		0536359825FA9DC400DBF135 /* RecomndedSpacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0536359625FA9DC400DBF135 /* RecomndedSpacesCollectionViewCell.swift */; };
 		0536359925FA9DC400DBF135 /* RecomndedSpacesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0536359725FA9DC400DBF135 /* RecomndedSpacesCollectionViewCell.xib */; };
 		0536359D25FAA6DB00DBF135 /* HomeAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0536359C25FAA6DB00DBF135 /* HomeAppViewController.swift */; };
+		053635B325FB808B00DBF135 /* PopularSpacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053635B125FB808B00DBF135 /* PopularSpacesTableViewCell.swift */; };
+		053635B425FB808B00DBF135 /* PopularSpacesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053635B225FB808B00DBF135 /* PopularSpacesTableViewCell.xib */; };
 		057597EC25F57DDF0029E2B3 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057597EB25F57DDF0029E2B3 /* LoginFormViewController.swift */; };
 		057597EF25F580ED0029E2B3 /* RegisterFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057597EE25F580ED0029E2B3 /* RegisterFormViewController.swift */; };
 		057597F225F583390029E2B3 /* VerifyPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057597F125F583390029E2B3 /* VerifyPhoneViewController.swift */; };
@@ -37,6 +39,8 @@
 		0536359625FA9DC400DBF135 /* RecomndedSpacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomndedSpacesCollectionViewCell.swift; sourceTree = "<group>"; };
 		0536359725FA9DC400DBF135 /* RecomndedSpacesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecomndedSpacesCollectionViewCell.xib; sourceTree = "<group>"; };
 		0536359C25FAA6DB00DBF135 /* HomeAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAppViewController.swift; sourceTree = "<group>"; };
+		053635B125FB808B00DBF135 /* PopularSpacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSpacesTableViewCell.swift; sourceTree = "<group>"; };
+		053635B225FB808B00DBF135 /* PopularSpacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularSpacesTableViewCell.xib; sourceTree = "<group>"; };
 		057597EB25F57DDF0029E2B3 /* LoginFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
 		057597EE25F580ED0029E2B3 /* RegisterFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormViewController.swift; sourceTree = "<group>"; };
 		057597F125F583390029E2B3 /* VerifyPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				0536359125FA785400DBF135 /* UICollectionView+Extinsion.swift */,
 				0536359625FA9DC400DBF135 /* RecomndedSpacesCollectionViewCell.swift */,
 				0536359725FA9DC400DBF135 /* RecomndedSpacesCollectionViewCell.xib */,
+				053635B125FB808B00DBF135 /* PopularSpacesTableViewCell.swift */,
+				053635B225FB808B00DBF135 /* PopularSpacesTableViewCell.xib */,
 			);
 			path = Spaound;
 			sourceTree = "<group>";
@@ -244,6 +250,7 @@
 			files = (
 				05A2EEBD25F4EDEC008BEE2F /* LaunchScreen.storyboard in Resources */,
 				05A2EEBA25F4EDEC008BEE2F /* Assets.xcassets in Resources */,
+				053635B425FB808B00DBF135 /* PopularSpacesTableViewCell.xib in Resources */,
 				05A2EEB825F4EDEB008BEE2F /* Main.storyboard in Resources */,
 				0536358B25FA655F00DBF135 /* GoogleService-Info.plist in Resources */,
 				0536359925FA9DC400DBF135 /* RecomndedSpacesCollectionViewCell.xib in Resources */,
@@ -311,6 +318,7 @@
 				05A2EEB125F4EDEB008BEE2F /* AppDelegate.swift in Sources */,
 				05A2EEB325F4EDEB008BEE2F /* SceneDelegate.swift in Sources */,
 				0536358F25FA776200DBF135 /* UITableView+Extinsion.swift in Sources */,
+				053635B325FB808B00DBF135 /* PopularSpacesTableViewCell.swift in Sources */,
 				0536359D25FAA6DB00DBF135 /* HomeAppViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

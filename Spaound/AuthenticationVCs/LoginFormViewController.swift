@@ -13,6 +13,7 @@ class LoginFormViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var resetPasswordLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,11 @@ class LoginFormViewController: UIViewController {
         resetPasswordLabel.isUserInteractionEnabled = true
         resetPasswordLabel.addGestureRecognizer(tap)
         
+    }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        loginButton.layer.cornerRadius = 16
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

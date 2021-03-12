@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var registerLabel: UILabel!
     
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,12 @@ class HomeViewController: UIViewController {
         registerLabel.isUserInteractionEnabled = true
         registerLabel.addGestureRecognizer(tap)
             }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        loginButton.layer.cornerRadius = 16
+    }
+    
     
     @IBAction func loginTapped(_ sender: Any) {
         let loginFormVC = self.storyboard?.instantiateViewController(identifier: "LoginForm") as! LoginFormViewController
@@ -35,6 +42,8 @@ class HomeViewController: UIViewController {
         self.present(registerVC, animated: true, completion: nil)
         
     }
+    
+    
     
     
 }

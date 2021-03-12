@@ -8,11 +8,16 @@
 import UIKit
 
 class VerifyPhoneViewController: UIViewController {
-
+    @IBOutlet weak var createAccountButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        createAccountButton.layer.cornerRadius = 16
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
