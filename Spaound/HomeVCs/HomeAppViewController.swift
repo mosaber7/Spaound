@@ -13,6 +13,7 @@ class HomeAppViewController: UIViewController{
     
     @IBOutlet weak var popularSpacesTV: UITableView!
     
+    var spaces: [Space] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +23,49 @@ class HomeAppViewController: UIViewController{
         popularSpacesTV.dataSource = self
         popularSpacesTV.delegate = self
         popularSpacesTV.register(UINib(nibName: "PopularSpacesTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularSpacesTableViewCell")
+//getJson()
+    }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        
+    }
+    
+    func getJson(){
+        let url = URL(string: "http://localhost:3000/spaces/")!
+        
+        let request = URLRequest(url: url)
+        
+        URLSession.shared.dataTask(with: request) { (data, responce, error) in
+            guard let _ = error else{
+                
+                print("error in the network")
+                return
+            }
+            
+            guard let data = data else{
+                print("data -> nil")
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            self.spaces = try! decoder.decode([Space].self, from: data)
+            for space in self.spaces{
+                print("space name:\(space.name)")
+                
+            }
+            
+        }.resume()
+        
     }
       
+    @IBAction func seeAllTApped(_ sender: Any) {
+      let popularSpacesVC = self.storyboard?.instantiateViewController(identifier: "PopularSpacesViewController") as! PopularSpacesViewController
+        
+        popularSpacesVC.modalPresentationStyle = .fullScreen
+        self.present(popularSpacesVC, animated: true, completion: nil)
+        
+    }
     
 }
 

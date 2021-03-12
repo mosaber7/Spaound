@@ -13,6 +13,7 @@ class RecomndedSpacesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var soundViewContainer: UIView!
     @IBOutlet weak var wifiViewContainer: UIView!
+    @IBOutlet weak var ContainerView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +23,7 @@ class RecomndedSpacesCollectionViewCell: UICollectionViewCell {
         superview?.layoutSubviews()
         soundViewContainer.layer.cornerRadius = 16
         wifiViewContainer.layer.cornerRadius = 16
+        ContainerView.layer.cornerRadius = 16
     }
 
 }

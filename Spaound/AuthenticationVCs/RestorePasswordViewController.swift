@@ -20,9 +20,8 @@ class RestorePasswordViewController: UIViewController {
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
-        let loginVC = self.storyboard?.instantiateViewController(identifier: "LoginForm") as! LoginFormViewController
-        loginVC.modalPresentationStyle = .fullScreen
-        self.present(loginVC, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
+
     }
 
 

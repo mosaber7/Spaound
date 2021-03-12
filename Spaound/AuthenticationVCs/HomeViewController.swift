@@ -27,9 +27,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func loginTapped(_ sender: Any) {
         let loginFormVC = self.storyboard?.instantiateViewController(identifier: "LoginForm") as! LoginFormViewController
-        loginFormVC.modalPresentationStyle = .fullScreen
         
-        self.present(loginFormVC, animated: true, completion: nil)
+        navigationController?.pushViewController(loginFormVC, animated: true)
         
         
         
@@ -38,9 +37,7 @@ class HomeViewController: UIViewController {
     @objc func registerTapped(_ sender: UITapGestureRecognizer){
         let registerVC = self.storyboard?.instantiateViewController(identifier: "RegisterForm") as! RegisterFormViewController
     
-        registerVC.modalPresentationStyle = .fullScreen
-        self.present(registerVC, animated: true, completion: nil)
-        
+        navigationController?.pushViewController(registerVC, animated: true)
     }
     
     

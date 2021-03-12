@@ -24,9 +24,8 @@ class RegisterFormViewController: UIViewController {
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
-        let homeVC = self.storyboard?.instantiateViewController(identifier: "Home") as! HomeViewController
-        homeVC.modalPresentationStyle = .fullScreen
-        self.present(homeVC, animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
+
     }
     
     @IBAction func continueButtonTapped(_ sender: Any) {

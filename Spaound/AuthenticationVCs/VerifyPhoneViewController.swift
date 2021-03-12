@@ -21,9 +21,7 @@ class VerifyPhoneViewController: UIViewController {
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
-        let registerVC = self.storyboard?.instantiateViewController(identifier: "RegisterForm") as! HomeViewController
-        registerVC.modalPresentationStyle = .fullScreen
-        self.present(registerVC, animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func createAccountTapped(_ sender: Any) {

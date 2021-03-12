@@ -17,6 +17,8 @@
 		0536359D25FAA6DB00DBF135 /* HomeAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0536359C25FAA6DB00DBF135 /* HomeAppViewController.swift */; };
 		053635B325FB808B00DBF135 /* PopularSpacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053635B125FB808B00DBF135 /* PopularSpacesTableViewCell.swift */; };
 		053635B425FB808B00DBF135 /* PopularSpacesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053635B225FB808B00DBF135 /* PopularSpacesTableViewCell.xib */; };
+		053635CA25FBA68900DBF135 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053635C925FBA68900DBF135 /* Space.swift */; };
+		053635CD25FBAD4600DBF135 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053635CC25FBAD4600DBF135 /* ProfilePageViewController.swift */; };
 		057597EC25F57DDF0029E2B3 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057597EB25F57DDF0029E2B3 /* LoginFormViewController.swift */; };
 		057597EF25F580ED0029E2B3 /* RegisterFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057597EE25F580ED0029E2B3 /* RegisterFormViewController.swift */; };
 		057597F225F583390029E2B3 /* VerifyPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057597F125F583390029E2B3 /* VerifyPhoneViewController.swift */; };
@@ -27,6 +29,8 @@
 		05A2EEB825F4EDEB008BEE2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A2EEB625F4EDEB008BEE2F /* Main.storyboard */; };
 		05A2EEBA25F4EDEC008BEE2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A2EEB925F4EDEC008BEE2F /* Assets.xcassets */; };
 		05A2EEBD25F4EDEC008BEE2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A2EEBB25F4EDEC008BEE2F /* LaunchScreen.storyboard */; };
+		05AAA4CB25FC265A003BD3B2 /* PopularSpacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AAA4CA25FC265A003BD3B2 /* PopularSpacesViewController.swift */; };
+		05AAA4CE25FC3480003BD3B2 /* FindSpacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AAA4CD25FC3480003BD3B2 /* FindSpacesViewController.swift */; };
 		43406E5578596E0485ED9B9A /* Pods_Spaound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64F4B426554863063888D0F0 /* Pods_Spaound.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,8 @@
 		0536359C25FAA6DB00DBF135 /* HomeAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAppViewController.swift; sourceTree = "<group>"; };
 		053635B125FB808B00DBF135 /* PopularSpacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSpacesTableViewCell.swift; sourceTree = "<group>"; };
 		053635B225FB808B00DBF135 /* PopularSpacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularSpacesTableViewCell.xib; sourceTree = "<group>"; };
+		053635C925FBA68900DBF135 /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
+		053635CC25FBAD4600DBF135 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		057597EB25F57DDF0029E2B3 /* LoginFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
 		057597EE25F580ED0029E2B3 /* RegisterFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormViewController.swift; sourceTree = "<group>"; };
 		057597F125F583390029E2B3 /* VerifyPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +59,8 @@
 		05A2EEB925F4EDEC008BEE2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05A2EEBC25F4EDEC008BEE2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05A2EEBE25F4EDEC008BEE2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05AAA4CA25FC265A003BD3B2 /* PopularSpacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSpacesViewController.swift; sourceTree = "<group>"; };
+		05AAA4CD25FC3480003BD3B2 /* FindSpacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSpacesViewController.swift; sourceTree = "<group>"; };
 		64F4B426554863063888D0F0 /* Pods_Spaound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E4001B308BA7A92029C696 /* Pods-Spaound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaound.release.xcconfig"; path = "Target Support Files/Pods-Spaound/Pods-Spaound.release.xcconfig"; sourceTree = "<group>"; };
 		98FAE444667B524E249FD057 /* Pods-Spaound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaound.debug.xcconfig"; path = "Target Support Files/Pods-Spaound/Pods-Spaound.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				0536359C25FAA6DB00DBF135 /* HomeAppViewController.swift */,
+				053635CC25FBAD4600DBF135 /* ProfilePageViewController.swift */,
+				05AAA4CA25FC265A003BD3B2 /* PopularSpacesViewController.swift */,
+				05AAA4CD25FC3480003BD3B2 /* FindSpacesViewController.swift */,
 			);
 			path = HomeVCs;
 			sourceTree = "<group>";
@@ -94,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				0512904D25F51F8D00681273 /* StartCell.swift */,
+				053635C925FBA68900DBF135 /* Space.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -311,9 +323,13 @@
 				057597F525F5846C0029E2B3 /* RestorePasswordViewController.swift in Sources */,
 				057597EC25F57DDF0029E2B3 /* LoginFormViewController.swift in Sources */,
 				057597EF25F580ED0029E2B3 /* RegisterFormViewController.swift in Sources */,
+				053635CA25FBA68900DBF135 /* Space.swift in Sources */,
 				0536359225FA785400DBF135 /* UICollectionView+Extinsion.swift in Sources */,
+				053635CD25FBAD4600DBF135 /* ProfilePageViewController.swift in Sources */,
 				0512905725F5510400681273 /* HomeViewController.swift in Sources */,
 				0512904E25F51F8D00681273 /* StartCell.swift in Sources */,
+				05AAA4CE25FC3480003BD3B2 /* FindSpacesViewController.swift in Sources */,
+				05AAA4CB25FC265A003BD3B2 /* PopularSpacesViewController.swift in Sources */,
 				05A2EEB525F4EDEB008BEE2F /* OnBoardingViewController.swift in Sources */,
 				05A2EEB125F4EDEB008BEE2F /* AppDelegate.swift in Sources */,
 				05A2EEB325F4EDEB008BEE2F /* SceneDelegate.swift in Sources */,
