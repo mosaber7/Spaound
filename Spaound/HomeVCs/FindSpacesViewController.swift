@@ -14,7 +14,8 @@ class FindSpacesViewController: UIViewController {
     @IBOutlet weak var searchBarTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "PopularSpacesTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularSpacesTableViewCell")
+        
+        tableView.registerNib(cell: PopularSpacesTableViewCell.self)
         tableView.dataSource = self
         tableView.delegate = self
         searchBarTextField.delegate = self
@@ -22,6 +23,15 @@ class FindSpacesViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         searchBarContainerView.layer.cornerRadius = 16
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        view.endEditing(true)
+    }
+    
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
 
 }
 
@@ -31,6 +41,10 @@ extension FindSpacesViewController: UITextFieldDelegate{
         tableView.isHidden = false
         return true
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
 }
 
 extension FindSpacesViewController: UITableViewDelegate, UITableViewDataSource{
@@ -39,7 +53,7 @@ extension FindSpacesViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PopularSpacesTableViewCell", for: indexPath) as! PopularSpacesTableViewCell
+        let cell = tableView.dequeue() as PopularSpacesTableViewCell
         return cell
         
     }

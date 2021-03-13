@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension UICollectionView{
+    
     func dequeue<Cell: UICollectionViewCell>(indexPath: IndexPath) -> Cell {
         let identifier = String(describing: Cell.self)
         
@@ -20,10 +21,10 @@ extension UICollectionView{
         return cell
     }
     
-    func registerNib<Cell: UICollectionViewCell>(Cell: Cell.Type) {
+    func registerNib<Cell: UICollectionViewCell>(cell: Cell.Type) {
         
-        let name = String(describing: Cell.self)
-        self.register(UINib(nibName: name, bundle: nil), forCellWithReuseIdentifier: name)
+        let nibName = String(describing: Cell.self)
+        self.register(UINib(nibName: nibName, bundle: nil), forCellWithReuseIdentifier: nibName)
         
     }
 }

@@ -68,4 +68,22 @@ class LoginFormViewController: UIViewController {
         present(alert, animated: true, completion: nil)
         
     }
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+}
+
+//handling the keyboard extension
+
+extension LoginFormViewController: UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        view.endEditing(true)
+    }
 }

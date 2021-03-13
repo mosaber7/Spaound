@@ -23,7 +23,7 @@ class OnBoardingViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StartCell", for: indexPath) as! StartCell
+        let cell = collectionView.dequeue(indexPath: indexPath) as StartCell
         
         if indexPath.row == 0 {
             

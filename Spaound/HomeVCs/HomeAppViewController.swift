@@ -19,11 +19,14 @@ class HomeAppViewController: UIViewController{
         super.viewDidLoad()
         rcmndedSpcsCollectionView.delegate = self
         rcmndedSpcsCollectionView.dataSource = self
-        rcmndedSpcsCollectionView.register(UINib(nibName: "RecomndedSpacesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "RecomndedSpacesCollectionViewCell")
+        
+        rcmndedSpcsCollectionView.registerNib(cell: RecomndedSpacesCollectionViewCell.self)
+        
         popularSpacesTV.dataSource = self
         popularSpacesTV.delegate = self
-        popularSpacesTV.register(UINib(nibName: "PopularSpacesTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularSpacesTableViewCell")
-//getJson()
+        
+        popularSpacesTV.registerNib(cell: PopularSpacesTableViewCell.self)
+        
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -79,7 +82,8 @@ extension HomeAppViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = rcmndedSpcsCollectionView.dequeueReusableCell(withReuseIdentifier: "RecomndedSpacesCollectionViewCell", for: indexPath)
+      
+        let cell = rcmndedSpcsCollectionView.dequeue(indexPath: indexPath) as RecomndedSpacesCollectionViewCell
         
         return cell
         
@@ -102,7 +106,8 @@ extension HomeAppViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = popularSpacesTV.dequeueReusableCell(withIdentifier: "PopularSpacesTableViewCell") as! PopularSpacesTableViewCell
+        let cell = popularSpacesTV.dequeue() as PopularSpacesTableViewCell
+        
         return cell
     }
     

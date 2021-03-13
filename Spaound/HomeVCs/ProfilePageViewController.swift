@@ -10,11 +10,15 @@ import UIKit
 class ProfilePageViewController: UIViewController {
     var spaces: [Space] = []
 
-
+    @IBOutlet weak var signOutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        signOutButton.layer.cornerRadius = 16
     }
     
 

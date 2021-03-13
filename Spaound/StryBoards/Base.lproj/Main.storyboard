@@ -312,7 +312,7 @@ is an easy task with us.</string>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="blueToRedColor"/>
-                        <color key="selectedImageTintColor" name="secondaryLabelColor"/>
+                        <color key="selectedImageTintColor" name="tableViewCellName"/>
                     </tabBar>
                     <connections>
                         <segue destination="HgS-th-0Ai" kind="relationship" relationship="viewControllers" id="gPM-Pf-CEC"/>
@@ -579,6 +579,9 @@ is an easy task with us.</string>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="XaU-Hf-gyJ"/>
+                    <connections>
+                        <outlet property="signOutButton" destination="pfU-zV-zez" id="113-he-5h1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rsn-eR-Acq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -597,13 +600,14 @@ is an easy task with us.</string>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cTa-gc-bkp">
                                         <rect key="frame" x="24" y="24.333333333333329" width="19.666666666666671" height="18"/>
-                                        <color key="tintColor" name="secondaryLabelColor"/>
+                                        <color key="tintColor" name="skipButtonColor"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Co-Working Spaces" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hEJ-9w-YPE">
                                         <rect key="frame" x="67.666666666666657" y="21.333333333333329" width="264.33333333333337" height="23.666666666666671"/>
                                         <color key="backgroundColor" name="textFieldColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" name="textFieldColor"/>
@@ -638,6 +642,7 @@ by name and we’ll help you find them.</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="361-li-o6f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="PZN-XO-HzW" firstAttribute="top" secondItem="6Ee-mK-Zax" secondAttribute="bottom" constant="36" id="0aw-XF-OV2"/>
                             <constraint firstItem="PZN-XO-HzW" firstAttribute="leading" secondItem="361-li-o6f" secondAttribute="leading" constant="36" id="4M7-YY-mQ4"/>
@@ -651,8 +656,11 @@ by name and we’ll help you find them.</string>
                             <constraint firstItem="6Ee-mK-Zax" firstAttribute="top" secondItem="361-li-o6f" secondAttribute="top" constant="32" id="oq3-PZ-7d2"/>
                             <constraint firstItem="361-li-o6f" firstAttribute="trailing" secondItem="PZN-XO-HzW" secondAttribute="trailing" constant="36" id="tr6-Fh-3eL"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="XgK-yj-gcT" appends="YES" id="7KZ-4I-x7B"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" selectedImage="magnifyingglass" catalog="system" id="Xo2-wC-PQf"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="Xo2-wC-PQf"/>
                     <connections>
                         <outlet property="searchBarContainerView" destination="6Ee-mK-Zax" id="oRN-bi-s3y"/>
                         <outlet property="searchBarTextField" destination="hEJ-9w-YPE" id="7Wq-uE-JIn"/>
@@ -660,6 +668,11 @@ by name and we’ll help you find them.</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gt7-lz-93g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XgK-yj-gcT">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="0IQ-jc-PQI" id="Biv-Mn-Y2X"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="708" y="1100"/>
         </scene>
@@ -706,6 +719,9 @@ and book your time at your favorite space.</string>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eBo-Jw-emj" id="09i-1R-ZAo"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pnf-oS-a7B">
                                 <rect key="frame" x="36" y="316" width="356" height="50"/>
@@ -716,6 +732,9 @@ and book your time at your favorite space.</string>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eBo-Jw-emj" id="uoD-UO-gmx"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtZ-Ky-8WO">
                                 <rect key="frame" x="109" y="406" width="210" height="22"/>
@@ -758,6 +777,7 @@ and book your time at your favorite space.</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="K4A-rO-W5O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="tgf-uD-187" firstAttribute="leading" secondItem="fhw-fc-XUc" secondAttribute="leading" id="87C-ym-Cet"/>
                             <constraint firstItem="pnf-oS-a7B" firstAttribute="leading" secondItem="K4A-rO-W5O" secondAttribute="leading" constant="36" id="B35-R4-QoR"/>
@@ -777,6 +797,9 @@ and book your time at your favorite space.</string>
                             <constraint firstItem="K4A-rO-W5O" firstAttribute="bottom" secondItem="YOC-aK-sHZ" secondAttribute="bottom" constant="32" id="rMN-Ky-6vE"/>
                             <constraint firstItem="yG3-l7-AqA" firstAttribute="leading" secondItem="K4A-rO-W5O" secondAttribute="leading" constant="36" id="zrW-Gi-knz"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="rri-vj-vcM" appends="YES" id="Xsm-ma-E9f"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="31r-uW-9Qy"/>
                     <connections>
@@ -788,6 +811,11 @@ and book your time at your favorite space.</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vY0-Kp-Xyt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rri-vj-vcM">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="eBo-Jw-emj" id="aid-Ft-7VA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2131.8840579710145" y="-526.33928571428567"/>
         </scene>
@@ -832,6 +860,9 @@ and book your time at your favorite space.</string>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Kc4-0Z-r6X" id="XEe-6t-mSi"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nI7-9c-f2p">
                                 <rect key="frame" x="36" y="316" width="356" height="50"/>
@@ -842,6 +873,9 @@ and book your time at your favorite space.</string>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Kc4-0Z-r6X" id="Ll0-HG-t4I"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xgc-hj-cPO">
                                 <rect key="frame" x="36" y="374" width="356" height="50"/>
@@ -851,6 +885,9 @@ and book your time at your favorite space.</string>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Kc4-0Z-r6X" id="Qxj-la-Adj"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnN-j9-xGt">
                                 <rect key="frame" x="36" y="805" width="356" height="55"/>
@@ -878,10 +915,14 @@ and book your time at your favorite space.</string>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Kc4-0Z-r6X" id="Niz-ZN-K3A"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JpK-fG-mTF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="i6D-cr-drr" firstAttribute="top" secondItem="JpK-fG-mTF" secondAttribute="top" constant="16" id="E5R-aK-5qX"/>
                             <constraint firstItem="xgc-hj-cPO" firstAttribute="trailing" secondItem="nI7-9c-f2p" secondAttribute="trailing" id="Efc-MC-bcR"/>
@@ -905,6 +946,9 @@ and book your time at your favorite space.</string>
                             <constraint firstItem="JpK-fG-mTF" firstAttribute="bottom" secondItem="EnN-j9-xGt" secondAttribute="bottom" constant="32" id="zBx-si-3Kt"/>
                             <constraint firstItem="nI7-9c-f2p" firstAttribute="top" secondItem="5if-pL-CCL" secondAttribute="bottom" constant="8" id="zc8-1v-GF1"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Xo7-cr-VXf" appends="YES" id="chy-Q4-wXu"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="DGO-K0-9q1"/>
                     <connections>
@@ -916,6 +960,11 @@ and book your time at your favorite space.</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tkw-zg-zz6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Xo7-cr-VXf">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="Kc4-0Z-r6X" id="1as-uc-uem"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2168.1159420289855" y="-1181.25"/>
         </scene>
@@ -980,6 +1029,9 @@ spaces can contact you easily.</string>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="nq0-zf-yWT" id="gIb-Z1-MCf"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-kq-O6f">
                                         <rect key="frame" x="68" y="0.0" width="60" height="60"/>
@@ -990,6 +1042,9 @@ spaces can contact you easily.</string>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="nq0-zf-yWT" id="Kf7-Vp-KlA"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXp-Ov-HRU">
                                         <rect key="frame" x="136" y="0.0" width="60" height="60"/>
@@ -1000,6 +1055,9 @@ spaces can contact you easily.</string>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="nq0-zf-yWT" id="Gjg-Po-rPu"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QvX-74-Ljm">
                                         <rect key="frame" x="204" y="0.0" width="60" height="60"/>
@@ -1010,6 +1068,9 @@ spaces can contact you easily.</string>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="nq0-zf-yWT" id="HHD-Lk-Ct9"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -1028,6 +1089,7 @@ spaces can contact you easily.</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ghD-ps-w8e"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="8Rb-et-nKk" firstAttribute="leading" secondItem="YHI-xS-6Et" secondAttribute="leading" id="0Rz-Rb-Ewi"/>
                             <constraint firstItem="p80-gT-M3B" firstAttribute="centerX" secondItem="S5O-gt-AwM" secondAttribute="centerX" id="2gz-nD-juh"/>
@@ -1045,6 +1107,9 @@ spaces can contact you easily.</string>
                             <constraint firstAttribute="trailing" secondItem="lTx-Db-5qy" secondAttribute="trailing" constant="36" id="k7C-eC-WfY"/>
                             <constraint firstItem="Bsa-uO-4yg" firstAttribute="top" secondItem="8Rb-et-nKk" secondAttribute="bottom" constant="24" id="vP4-bt-Ous"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="jvh-en-hYi" appends="YES" id="Gbi-xu-Lwm"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="1qH-xE-xx3"/>
                     <connections>
@@ -1052,6 +1117,11 @@ spaces can contact you easily.</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mg-C3-L5K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jvh-en-hYi">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="nq0-zf-yWT" id="G5x-4H-QVx"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3084.057971014493" y="-1164.5089285714284"/>
         </scene>
@@ -1096,6 +1166,9 @@ and you’ll be able to reset your password.</string>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Bm9-fI-774" id="N36-gD-nx3"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sF0-iU-awL">
                                 <rect key="frame" x="36" y="751" width="356" height="55"/>
@@ -1115,6 +1188,7 @@ and you’ll be able to reset your password.</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FSc-bS-52r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="iZI-wQ-mtX" firstAttribute="leading" secondItem="ZAJ-BY-b4T" secondAttribute="leading" id="Ee6-RN-dDF"/>
                             <constraint firstItem="c7y-60-zCf" firstAttribute="top" secondItem="iZI-wQ-mtX" secondAttribute="bottom" constant="32" id="KfZ-uQ-Kkn"/>
@@ -1129,6 +1203,9 @@ and you’ll be able to reset your password.</string>
                             <constraint firstItem="sF0-iU-awL" firstAttribute="leading" secondItem="FSc-bS-52r" secondAttribute="leading" constant="36" id="qR9-NY-uNN"/>
                             <constraint firstItem="ZAJ-BY-b4T" firstAttribute="leading" secondItem="trd-SW-cPM" secondAttribute="leading" id="ykr-MW-AgV"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="igv-Ki-Rpr" appends="YES" id="SBc-lg-OJl"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Jju-Us-frf"/>
                     <connections>
@@ -1136,6 +1213,11 @@ and you’ll be able to reset your password.</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSI-jc-7u6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="igv-Ki-Rpr">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="Bm9-fI-774" id="4FL-zM-sxQ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3084.057971014493" y="-526.33928571428567"/>
         </scene>

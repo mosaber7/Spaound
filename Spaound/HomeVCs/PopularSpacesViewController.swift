@@ -14,7 +14,8 @@ class PopularSpacesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "PopularSpacesTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularSpacesTableViewCell")
+       
+        tableView.registerNib(cell: PopularSpacesTableViewCell.self)
         tableView.delegate = self
         tableView.dataSource = self
 
@@ -34,7 +35,7 @@ extension PopularSpacesViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PopularSpacesTableViewCell", for: indexPath) as! PopularSpacesTableViewCell
+        let cell = tableView.dequeue() as PopularSpacesTableViewCell
         
         return cell
     }

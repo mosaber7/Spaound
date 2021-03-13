@@ -19,4 +19,10 @@ extension UITableView{
         
         return cell
     }
+    func registerNib<Cell: UITableViewCell>(cell: Cell.Type){
+        let identifier = String(describing: Cell.self)
+        self.register(UINib(nibName: identifier, bundle: nil), forCellReuseIdentifier: identifier)
+        
+    }
+    
 }

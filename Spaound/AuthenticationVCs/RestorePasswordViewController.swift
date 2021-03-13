@@ -24,5 +24,21 @@ class RestorePasswordViewController: UIViewController {
 
     }
 
+@IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+    view.endEditing(true)
+}
 
+}
+
+extension RestorePasswordViewController: UITextFieldDelegate{
+
+func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+}
+
+override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    
+    view.endEditing(true)
+}
 }
