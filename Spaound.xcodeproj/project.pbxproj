@@ -30,7 +30,7 @@
 		05A2EEBA25F4EDEC008BEE2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A2EEB925F4EDEC008BEE2F /* Assets.xcassets */; };
 		05A2EEBD25F4EDEC008BEE2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A2EEBB25F4EDEC008BEE2F /* LaunchScreen.storyboard */; };
 		05AAA4CB25FC265A003BD3B2 /* PopularSpacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AAA4CA25FC265A003BD3B2 /* PopularSpacesViewController.swift */; };
-		05AAA4CE25FC3480003BD3B2 /* FindSpacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AAA4CD25FC3480003BD3B2 /* FindSpacesViewController.swift */; };
+		05AAA4CE25FC3480003BD3B2 /* SearchSpacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AAA4CD25FC3480003BD3B2 /* SearchSpacesViewController.swift */; };
 		43406E5578596E0485ED9B9A /* Pods_Spaound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64F4B426554863063888D0F0 /* Pods_Spaound.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +60,7 @@
 		05A2EEBC25F4EDEC008BEE2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05A2EEBE25F4EDEC008BEE2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05AAA4CA25FC265A003BD3B2 /* PopularSpacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSpacesViewController.swift; sourceTree = "<group>"; };
-		05AAA4CD25FC3480003BD3B2 /* FindSpacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSpacesViewController.swift; sourceTree = "<group>"; };
+		05AAA4CD25FC3480003BD3B2 /* SearchSpacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSpacesViewController.swift; sourceTree = "<group>"; };
 		64F4B426554863063888D0F0 /* Pods_Spaound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E4001B308BA7A92029C696 /* Pods-Spaound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaound.release.xcconfig"; path = "Target Support Files/Pods-Spaound/Pods-Spaound.release.xcconfig"; sourceTree = "<group>"; };
 		98FAE444667B524E249FD057 /* Pods-Spaound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaound.debug.xcconfig"; path = "Target Support Files/Pods-Spaound/Pods-Spaound.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 				0536359C25FAA6DB00DBF135 /* HomeAppViewController.swift */,
 				053635CC25FBAD4600DBF135 /* ProfilePageViewController.swift */,
 				05AAA4CA25FC265A003BD3B2 /* PopularSpacesViewController.swift */,
-				05AAA4CD25FC3480003BD3B2 /* FindSpacesViewController.swift */,
+				05AAA4CD25FC3480003BD3B2 /* SearchSpacesViewController.swift */,
 			);
 			path = HomeVCs;
 			sourceTree = "<group>";
@@ -328,7 +328,7 @@
 				053635CD25FBAD4600DBF135 /* ProfilePageViewController.swift in Sources */,
 				0512905725F5510400681273 /* HomeViewController.swift in Sources */,
 				0512904E25F51F8D00681273 /* StartCell.swift in Sources */,
-				05AAA4CE25FC3480003BD3B2 /* FindSpacesViewController.swift in Sources */,
+				05AAA4CE25FC3480003BD3B2 /* SearchSpacesViewController.swift in Sources */,
 				05AAA4CB25FC265A003BD3B2 /* PopularSpacesViewController.swift in Sources */,
 				05A2EEB525F4EDEB008BEE2F /* OnBoardingViewController.swift in Sources */,
 				05A2EEB125F4EDEB008BEE2F /* AppDelegate.swift in Sources */,

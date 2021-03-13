@@ -12,5 +12,6 @@ pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'Cosmos'
 pod 'Kingfisher'
+pod 'Alamofire'
 
 end

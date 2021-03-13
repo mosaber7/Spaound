@@ -458,7 +458,7 @@ is an easy task with us.</string>
                                 <color key="textColor" name="mainLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EL4-JJ-Zoo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EL4-JJ-Zoo">
                                 <rect key="frame" x="36" y="203.66666666666669" width="356" height="688.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -560,7 +560,9 @@ is an easy task with us.</string>
                                 <rect key="frame" x="36" y="763" width="356" height="40"/>
                                 <color key="backgroundColor" name="textFieldColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
-                                <state key="normal" title="Sign Out"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" name="actionButtonColor"/>
+                                </state>
                                 <connections>
                                     <action selector="signOutTapped:" destination="blC-DT-Zkk" eventType="touchUpInside" id="VyM-mq-myx"/>
                                 </connections>
@@ -590,7 +592,7 @@ is an easy task with us.</string>
         <!--Search-->
         <scene sceneID="Rl9-qr-HRn">
             <objects>
-                <viewController id="0IQ-jc-PQI" customClass="FindSpacesViewController" customModule="Spaound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0IQ-jc-PQI" customClass="SearchSpacesViewController" customModule="Spaound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FcM-bX-EBK">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -807,7 +809,6 @@ and book your time at your favorite space.</string>
                         <outlet property="loginButton" destination="YOC-aK-sHZ" id="ith-Ad-q4M"/>
                         <outlet property="passwordTextField" destination="pnf-oS-a7B" id="GEG-Ne-JcZ"/>
                         <outlet property="resetPasswordLabel" destination="YtZ-Ky-8WO" id="Sli-NF-GmG"/>
-                        <segue destination="Bm9-fI-774" kind="show" id="tk4-hd-Y2r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vY0-Kp-Xyt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -828,7 +829,7 @@ and book your time at your favorite space.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6D-cr-drr">
-                                <rect key="frame" x="36" y="60" width="58" height="22"/>
+                                <rect key="frame" x="36" y="60" width="58" height="28"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
                                 <state key="normal" title=" Back">
                                     <color key="titleColor" name="mainLabelColor"/>
@@ -839,13 +840,13 @@ and book your time at your favorite space.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnr-7P-tWw">
-                                <rect key="frame" x="36" y="114" width="117" height="44"/>
+                                <rect key="frame" x="36" y="120" width="117" height="44"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
                                 <color key="textColor" name="mainLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5z-Yi-2Hv">
-                                <rect key="frame" x="36" y="182" width="299.33333333333331" height="44"/>
+                                <rect key="frame" x="36" y="188" width="299.33333333333331" height="44"/>
                                 <string key="text">Create your account so you can search
 and book your time at your favorite space.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
@@ -853,7 +854,7 @@ and book your time at your favorite space.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5if-pL-CCL">
-                                <rect key="frame" x="36" y="258" width="356" height="50"/>
+                                <rect key="frame" x="36" y="264" width="356" height="50"/>
                                 <color key="backgroundColor" name="textFieldColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="b4j-GP-m2W"/>
@@ -865,10 +866,9 @@ and book your time at your favorite space.</string>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nI7-9c-f2p">
-                                <rect key="frame" x="36" y="316" width="356" height="50"/>
+                                <rect key="frame" x="36" y="322" width="356" height="50"/>
                                 <color key="backgroundColor" name="textFieldColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="CxR-Ga-YEP"/>
                                     <constraint firstAttribute="height" constant="50" id="LIz-mE-OHm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -878,7 +878,7 @@ and book your time at your favorite space.</string>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xgc-hj-cPO">
-                                <rect key="frame" x="36" y="374" width="356" height="50"/>
+                                <rect key="frame" x="36" y="380" width="356" height="50"/>
                                 <color key="backgroundColor" name="textFieldColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fjJ-PL-Y5K"/>
@@ -903,15 +903,13 @@ and book your time at your favorite space.</string>
                                 <connections>
                                     <action selector="continueButtonTapped:" destination="Kc4-0Z-r6X" eventType="touchUpInside" id="WCu-Ox-WXe"/>
                                     <action selector="loginTapped:" destination="QL0-Bx-bfl" eventType="touchUpInside" id="7kr-GQ-03L"/>
-                                    <segue destination="nq0-zf-yWT" kind="show" id="HBm-Fg-iLq"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4rl-2u-T7W">
-                                <rect key="frame" x="36" y="432" width="356" height="50"/>
+                                <rect key="frame" x="36" y="438" width="356" height="50"/>
                                 <color key="backgroundColor" name="textFieldColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Mcc-IG-zjQ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="NSr-uh-nsJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -924,6 +922,7 @@ and book your time at your favorite space.</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="EnN-j9-xGt" firstAttribute="top" secondItem="4rl-2u-T7W" secondAttribute="bottom" constant="317" id="2rR-7L-Dpl"/>
                             <constraint firstItem="i6D-cr-drr" firstAttribute="top" secondItem="JpK-fG-mTF" secondAttribute="top" constant="16" id="E5R-aK-5qX"/>
                             <constraint firstItem="xgc-hj-cPO" firstAttribute="trailing" secondItem="nI7-9c-f2p" secondAttribute="trailing" id="Efc-MC-bcR"/>
                             <constraint firstItem="nI7-9c-f2p" firstAttribute="leading" secondItem="JpK-fG-mTF" secondAttribute="leading" constant="36" id="GNP-Xk-nck"/>
@@ -973,11 +972,11 @@ and book your time at your favorite space.</string>
             <objects>
                 <viewController storyboardIdentifier="VerifyPhoneForm" id="nq0-zf-yWT" customClass="VerifyPhoneViewController" customModule="Spaound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S5O-gt-AwM">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHI-xS-6Et">
-                                <rect key="frame" x="36" y="16" width="58" height="22"/>
+                                <rect key="frame" x="36" y="60" width="58" height="22"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
                                 <state key="normal" title=" Back">
                                     <color key="titleColor" name="mainLabelColor"/>
@@ -988,13 +987,13 @@ and book your time at your favorite space.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Rb-et-nKk">
-                                <rect key="frame" x="36" y="70" width="178.66666666666666" height="44"/>
+                                <rect key="frame" x="36" y="114" width="178.66666666666666" height="44"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
                                 <color key="textColor" name="mainLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsa-uO-4yg">
-                                <rect key="frame" x="36" y="138" width="281.66666666666669" height="44"/>
+                                <rect key="frame" x="36" y="182" width="281.66666666666669" height="44"/>
                                 <string key="text">Verify your phone number so our lovely 
 spaces can contact you easily.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
@@ -1002,7 +1001,7 @@ spaces can contact you easily.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTx-Db-5qy">
-                                <rect key="frame" x="36" y="751" width="356" height="55"/>
+                                <rect key="frame" x="36" y="805" width="356" height="55"/>
                                 <color key="backgroundColor" name="actionButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="QrM-Oa-54j"/>
@@ -1018,7 +1017,7 @@ spaces can contact you easily.</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="p80-gT-M3B">
-                                <rect key="frame" x="82" y="214" width="264" height="60"/>
+                                <rect key="frame" x="82" y="258" width="264" height="60"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mAn-Jc-0wK">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -1075,13 +1074,13 @@ spaces can contact you easily.</string>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn’t you receive any code?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kW-fQ-u3z">
-                                <rect key="frame" x="99" y="298" width="230" height="24.666666666666686"/>
+                                <rect key="frame" x="99" y="342" width="230" height="24.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
                                 <color key="textColor" name="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-send code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xs-fN-iTZ">
-                                <rect key="frame" x="158.33333333333334" y="338.66666666666669" width="111.33333333333334" height="24.666666666666686"/>
+                                <rect key="frame" x="158.33333333333334" y="382.66666666666669" width="111.33333333333334" height="24.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                 <color key="textColor" name="blueToRedColor"/>
                                 <nil key="highlightedColor"/>
@@ -1130,11 +1129,11 @@ spaces can contact you easily.</string>
             <objects>
                 <viewController storyboardIdentifier="RestorePasswordForm" id="Bm9-fI-774" customClass="RestorePasswordViewController" customModule="Spaound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rhv-Fx-IKF">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trd-SW-cPM">
-                                <rect key="frame" x="36" y="16" width="58" height="22"/>
+                                <rect key="frame" x="36" y="60" width="58" height="22"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
                                 <state key="normal" title=" Back">
                                     <color key="titleColor" name="mainLabelColor"/>
@@ -1145,13 +1144,13 @@ spaces can contact you easily.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAJ-BY-b4T">
-                                <rect key="frame" x="36" y="70" width="238" height="44"/>
+                                <rect key="frame" x="36" y="114" width="238" height="44"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
                                 <color key="textColor" name="mainLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZI-wQ-mtX">
-                                <rect key="frame" x="36" y="138" width="330.33333333333331" height="44"/>
+                                <rect key="frame" x="36" y="182" width="330.33333333333331" height="44"/>
                                 <string key="text">Enter your email, so we can send you reset link
 and you’ll be able to reset your password.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
@@ -1159,7 +1158,7 @@ and you’ll be able to reset your password.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c7y-60-zCf">
-                                <rect key="frame" x="36" y="214" width="356" height="50"/>
+                                <rect key="frame" x="36" y="258" width="356" height="50"/>
                                 <color key="backgroundColor" name="textFieldColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8dj-1l-3R3"/>
@@ -1171,7 +1170,7 @@ and you’ll be able to reset your password.</string>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sF0-iU-awL">
-                                <rect key="frame" x="36" y="751" width="356" height="55"/>
+                                <rect key="frame" x="36" y="805" width="356" height="55"/>
                                 <color key="backgroundColor" name="actionButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="Z5n-fh-oP7"/>

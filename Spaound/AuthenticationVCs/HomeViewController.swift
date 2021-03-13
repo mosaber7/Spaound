@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerLabel.textColor = UIColor(named: "mainLabelColor")
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.registerTapped(_:)))
         registerLabel.isUserInteractionEnabled = true
         registerLabel.addGestureRecognizer(tap)

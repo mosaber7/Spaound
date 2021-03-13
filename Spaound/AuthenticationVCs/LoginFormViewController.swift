@@ -17,6 +17,8 @@ class LoginFormViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        resetPasswordLabel.textColor = UIColor(named: "mainLabelColor")
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(resetPasswordTapped(_:)))
         resetPasswordLabel.isUserInteractionEnabled = true
         resetPasswordLabel.addGestureRecognizer(tap)

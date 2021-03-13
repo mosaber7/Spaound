@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.9.1)
   - Cosmos (23.0.0)
   - Firebase/Auth (6.34.0):
     - Firebase/CoreOnly
@@ -86,6 +87,7 @@ PODS:
   - PromisesObjC (1.2.12)
 
 DEPENDENCIES:
+  - Alamofire
   - Cosmos
   - Firebase/Auth
   - Firebase/Core
@@ -95,6 +97,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Cosmos
     - Firebase
     - FirebaseAnalytics
@@ -114,6 +117,7 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   Firebase: c23a36d9e4cdf7877dfcba8dd0c58add66358999
   FirebaseAnalytics: 3bb096873ee0d7fa4b6c70f5e9166b6da413cc7f
@@ -132,6 +136,6 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: d2904c9081d1d3b991ad59c34b9940f25509e9a7
+PODFILE CHECKSUM: 85880ff8961e38549a344465922a0659379ad967
 
 COCOAPODS: 1.10.0

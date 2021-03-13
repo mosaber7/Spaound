@@ -25,7 +25,7 @@ class RegisterFormViewController: UIViewController {
     
     @IBAction func backButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
-
+        
     }
     
     @IBAction func continueButtonTapped(_ sender: Any) {
@@ -37,24 +37,22 @@ class RegisterFormViewController: UIViewController {
             guard let _ = error else{
                 preconditionFailure("error with tha auth fn in the database")
             }
-                guard let userID = result?.user.uid else {
-                    return
-                    
-                }
-                let refrence = Database.database().reference()
-                let user = refrence.child("Users").child(userID)
-                let dataDict : [String: Any] = ["username": username, "phoneNumber": phoneNumber]
-                user.setValue(dataDict)
+            guard let userID = result?.user.uid else {
+                return
                 
+            }
+            let refrence = Database.database().reference()
+            let user = refrence.child("Users").child(userID)
+            let dataDict : [String: Any] = ["username": username, "phoneNumber": phoneNumber]
+            user.setValue(dataDict)
+            
             
         }
         
         
         let verfiyPhoneVC = self.storyboard?.instantiateViewController(identifier: "VerifyPhoneForm") as! VerifyPhoneViewController
         
-        verfiyPhoneVC.modalPresentationStyle = .fullScreen
-        self.present(verfiyPhoneVC, animated: true, completion: nil)
-    }
+        navigationController?.pushViewController(verfiyPhoneVC, animated: true)    }
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)

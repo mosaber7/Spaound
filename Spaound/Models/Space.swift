@@ -10,8 +10,8 @@ import Foundation
 struct Space: Codable {
     var name: String
     var address: String
-    var price: Int
-    var rating: Int
+    var rating: String
+    var price: String
     var imageUrl: String
     
 }
