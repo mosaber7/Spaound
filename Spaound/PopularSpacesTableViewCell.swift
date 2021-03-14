@@ -13,7 +13,10 @@ class PopularSpacesTableViewCell: UITableViewCell {
     @IBOutlet weak var ratingStarsContainer: UIView!
     
     @IBOutlet weak var imageViewContainer: UIView!
-    @IBOutlet weak var ContainerView: UIView!
+    @IBOutlet weak var cellContainerView: UIView!
+    @IBOutlet weak var discountImageView: UIImageView!
+    @IBOutlet weak var beforeDiscountPriceLabel: UILabel!
+    
     
     lazy var starsView: CosmosView = {
         let view = CosmosView()
@@ -32,9 +35,9 @@ class PopularSpacesTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         imageViewContainer.layer.cornerRadius = 8
-        ContainerView.layer.cornerRadius = 8
-        ContainerView.layer.borderWidth = 1
-        ContainerView.layer.borderColor = UIColor.lightGray.cgColor
+        cellContainerView.layer.cornerRadius = 8
+        cellContainerView.layer.borderWidth = 1
+        cellContainerView.layer.borderColor = UIColor.lightGray.cgColor
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 4, left: 0, bottom: 4, right: 0))
 
     }

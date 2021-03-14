@@ -107,7 +107,8 @@ extension HomeAppViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = popularSpacesTV.dequeue() as PopularSpacesTableViewCell
-        
+    //    cell.discountImageView.isHidden = true
+    //    cell.beforeDiscountPriceLabel.text = "140 LE"
         return cell
     }
     

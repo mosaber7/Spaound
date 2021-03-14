@@ -11,7 +11,8 @@ struct Space: Codable {
     var name: String
     var address: String
     var rating: String
-    var price: String
+    var beforeDiscountPrice: Int?
+    var price: Int
     var imageUrl: String
     
 }

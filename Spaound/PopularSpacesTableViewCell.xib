@@ -38,12 +38,38 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Dvc-8b-joS">
                         <rect key="frame" x="100" y="4" width="493" height="120"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kognitif Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDP-TQ-Ty6">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JF8-Mn-PiF">
                                 <rect key="frame" x="0.0" y="0.0" width="493" height="30"/>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
-                                <color key="textColor" name="tableViewCellName"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibo-p7-Jrk">
+                                        <rect key="frame" x="0.0" y="0.0" width="493" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kognitif Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDP-TQ-Ty6">
+                                                <rect key="frame" x="0.0" y="0.0" width="166.5" height="30"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
+                                                <color key="textColor" name="tableViewCellName"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discountImage" translatesAutoresizingMaskIntoConstraints="NO" id="wCp-e6-hn4">
+                                                <rect key="frame" x="455" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="V0A-cs-uDk"/>
+                                                    <constraint firstAttribute="height" constant="30" id="XLk-Sn-6RD"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="wCp-e6-hn4" secondAttribute="bottom" id="TyS-H9-PVL"/>
+                                            <constraint firstItem="wCp-e6-hn4" firstAttribute="top" secondItem="ibo-p7-Jrk" secondAttribute="top" id="lqX-uI-u3e"/>
+                                            <constraint firstAttribute="bottom" secondItem="kDP-TQ-Ty6" secondAttribute="bottom" id="qKt-OE-0df"/>
+                                            <constraint firstItem="kDP-TQ-Ty6" firstAttribute="leading" secondItem="ibo-p7-Jrk" secondAttribute="leading" id="uha-f7-7ou"/>
+                                            <constraint firstItem="kDP-TQ-Ty6" firstAttribute="top" secondItem="ibo-p7-Jrk" secondAttribute="top" id="wwH-xq-OTT"/>
+                                            <constraint firstAttribute="trailing" secondItem="wCp-e6-hn4" secondAttribute="trailing" constant="8" id="yuu-ct-7ws"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nasr City, Makram Ebid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrx-ur-bqJ">
                                 <rect key="frame" x="0.0" y="30" width="493" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
@@ -76,11 +102,36 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L.E" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5V-AI-4YL">
-                                        <rect key="frame" x="108" y="0.0" width="385" height="30"/>
+                                        <rect key="frame" x="108" y="0.0" width="19" height="30"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                         <color key="textColor" name="actionButtonColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pra-N5-JOr">
+                                        <rect key="frame" x="131" y="0.0" width="362" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xt-T6-tXd">
+                                                <rect key="frame" x="16" y="0.0" width="42" height="30"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="120 LE">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="14" name=".SFNS-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <integer key="NSStrikethrough" value="1"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="7Xt-T6-tXd" secondAttribute="bottom" id="Ker-wK-bL5"/>
+                                            <constraint firstItem="7Xt-T6-tXd" firstAttribute="top" secondItem="pra-N5-JOr" secondAttribute="top" id="RAv-W5-WRr"/>
+                                            <constraint firstItem="7Xt-T6-tXd" firstAttribute="leading" secondItem="pra-N5-JOr" secondAttribute="leading" constant="16" id="co9-Iu-FGp"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -99,7 +150,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="ContainerView" destination="H2p-sc-9uM" id="jqN-Eu-aZz"/>
+                <outlet property="beforeDiscountPriceLabel" destination="7Xt-T6-tXd" id="N19-uQ-4il"/>
+                <outlet property="cellContainerView" destination="H2p-sc-9uM" id="jqN-Eu-aZz"/>
+                <outlet property="discountImageView" destination="wCp-e6-hn4" id="qZk-2r-0nF"/>
                 <outlet property="imageViewContainer" destination="bsD-Mj-kfv" id="JY4-2I-WYR"/>
                 <outlet property="ratingStarsContainer" destination="HhC-J9-pKO" id="4yH-PG-mCH"/>
             </connections>
@@ -108,6 +161,7 @@
     </objects>
     <resources>
         <image name="Card1" width="414" height="300"/>
+        <image name="discountImage" width="42" height="42"/>
         <namedColor name="actionButtonColor">
             <color red="0.078000001609325409" green="0.21199999749660492" blue="0.63899999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
