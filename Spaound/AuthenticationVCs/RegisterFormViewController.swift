@@ -14,6 +14,10 @@ class RegisterFormViewController: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var usernameContainer: UIStackView!
+    @IBOutlet weak var emailContainer: UIStackView!
+    @IBOutlet weak var phoneContainer: UIStackView!
+    @IBOutlet weak var passwordContainer: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +25,10 @@ class RegisterFormViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         continueButton.layer.cornerRadius = 16
+        usernameContainer.layer.cornerRadius = 16
+        emailContainer.layer.cornerRadius = 16
+        phoneContainer.layer.cornerRadius = 16
+        passwordContainer.layer.cornerRadius = 16
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

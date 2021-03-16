@@ -1,0 +1,141 @@
+
+/* Class = "UILabel"; text = "Recommended Spaces"; ObjectID = "1bX-0R-eXy"; */
+"1bX-0R-eXy.text" = "اماكن مقترحه";
+
+/* Class = "UILabel"; text = "Didn’t you receive any code?"; ObjectID = "1kW-fQ-u3z"; */
+"1kW-fQ-u3z.text" = "لم تستلم اي كود ؟";
+
+/* Class = "UILabel"; text = "  Name"; ObjectID = "2Dk-nB-RT3"; */
+"2Dk-nB-RT3.text" = "الاسم";
+
+/* Class = "UILabel"; text = "Re-send code"; ObjectID = "4xs-fN-iTZ"; */
+"4xs-fN-iTZ.text" = "اعاده ارسال الكود";
+
+/* Class = "UIButton"; normalTitle = " See All"; ObjectID = "6JZ-JN-UJk"; */
+"6JZ-JN-UJk.normalTitle" = " See All";
+
+/* Class = "UILabel"; text = "Verify Phone"; ObjectID = "8Rb-et-nKk"; */
+"8Rb-et-nKk.text" = "توثيق الهاتف";
+
+/* Class = "UILabel"; text = "  Password"; ObjectID = "ATY-jF-pwz"; */
+"ATY-jF-pwz.text" = "كلمه السر  ";
+
+/* Class = "UILabel"; text = "Verify your phone number so our lovely \nspaces can contact you easily."; ObjectID = "Bsa-uO-4yg"; */
+"Bsa-uO-4yg.text" = "Verify your phone number so our lovely \nspaces can contact you easily.";
+
+/* Class = "UILabel"; text = "You can find any\nplace here"; ObjectID = "Bxd-04-OSC"; */
+"Bxd-04-OSC.text" = "You can find any\nplace here";
+
+/* Class = "UILabel"; text = "  Email"; ObjectID = "Cx4-RK-vMu"; */
+"Cx4-RK-vMu.text" = "ايميل  ";
+
+/* Class = "UIButton"; normalTitle = " Back"; ObjectID = "D4j-XV-uWp"; */
+"D4j-XV-uWp.normalTitle" = " الى الخلف";
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "EnN-j9-xGt"; */
+"EnN-j9-xGt.normalTitle" = "اكمل";
+
+/* Class = "UILabel"; text = "Spaound"; ObjectID = "Eq0-Uy-nG7"; */
+"Eq0-Uy-nG7.text" = "Spaound";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "FDJ-YG-OdL"; */
+"FDJ-YG-OdL.normalTitle" = "تخطي";
+
+/* Class = "UILabel"; text = "Create your account so you can search\nand book your time at your favorite space."; ObjectID = "J5z-Yi-2Hv"; */
+"J5z-Yi-2Hv.text" = "Create your account so you can search \n and book your time at your favorite space.";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "OVS-kn-L7i"; */
+"OVS-kn-L7i.normalTitle" = "تسجيل الدخول ";
+
+/* Class = "UILabel"; text = "Hi Mo, happy to see you again"; ObjectID = "P3x-Sz-WEf"; */
+"P3x-Sz-WEf.text" = "اهلا مو! سعيد لرؤيتك مجددا";
+
+/* Class = "UILabel"; text = "Search for your favorite Co-Working Space\nby name and we’ll help you find them."; ObjectID = "QPk-NL-8kF"; */
+"QPk-NL-8kF.text" = "ابحث عن اماكنك المفضله ونحن سنساعدك بالعثور عليهم";
+
+/* Class = "UILabel"; text = "  Phone"; ObjectID = "V1Q-vu-5xc"; */
+"V1Q-vu-5xc.text" = "الهاتف  ";
+
+/* Class = "UILabel"; text = "  Email"; ObjectID = "W6U-cG-8iu"; */
+"W6U-cG-8iu.text" = " ايميل  ";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "XaU-Hf-gyJ"; */
+"XaU-Hf-gyJ.title" = "ملف شخصي";
+
+/* Class = "UITabBarItem"; title = "Search"; ObjectID = "Xo2-wC-PQf"; */
+"Xo2-wC-PQf.title" = "ابحث";
+
+/* Class = "UIButton"; normalTitle = " Back"; ObjectID = "YHI-xS-6Et"; */
+"YHI-xS-6Et.normalTitle" = "الى الخلف  ";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "YOC-aK-sHZ"; */
+"YOC-aK-sHZ.normalTitle" = "تسجيل الدخول ";
+
+/* Class = "UILabel"; text = "Forget Password"; ObjectID = "ZAJ-BY-b4T"; */
+"ZAJ-BY-b4T.text" = "نسيت كلمه السر";
+
+/* Class = "UILabel"; text = "  Password"; ObjectID = "ZZ2-sh-yUM"; */
+"ZZ2-sh-yUM.text" = "  كلمه السر  ";
+
+/* Class = "UILabel"; text = "Good mood good place, let's go!\nHappy day with your favorite mood."; ObjectID = "bFC-TT-Ncf"; */
+"bFC-TT-Ncf.text" = "Good mood good place, let's go!\nHappy day with your favorite mood.";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "bnr-7P-tWw"; */
+"bnr-7P-tWw.text" = "انشاء ملف شخصي";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "fhw-fc-XUc"; */
+"fhw-fc-XUc.text" = "تسجيل الدخول ";
+
+/* Class = "UITextField"; placeholder = "Search Co-Working Spaces"; ObjectID = "hEJ-9w-YPE"; */
+"hEJ-9w-YPE.placeholder" = "Search Co-Working Spaces";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "hbW-ny-R8o"; */
+"hbW-ny-R8o.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = " Back"; ObjectID = "i6D-cr-drr"; */
+"i6D-cr-drr.normalTitle" = " الى الخلف";
+
+/* Class = "UILabel"; text = "Enter your email, so we can send you reset link\nand you’ll be able to reset your password."; ObjectID = "iZI-wQ-mtX"; */
+"iZI-wQ-mtX.text" = "Enter your email, so we can send you reset link\nand you’ll be able to reset your password.";
+
+/* Class = "UILabel"; text = "Popular Spaces"; ObjectID = "jIr-MS-wlV"; */
+"jIr-MS-wlV.text" = "Popular Spaces";
+
+/* Class = "UIButton"; normalTitle = "Create your account"; ObjectID = "lTx-Db-5qy"; */
+"lTx-Db-5qy.normalTitle" = "Create your account";
+
+/* Class = "UILabel"; text = "Where you’ll work today?"; ObjectID = "m3U-so-4b1"; */
+"m3U-so-4b1.text" = "Where you’ll work today?";
+
+/* Class = "UILabel"; text = "Find Co-Working spaces\nis an easy task with us."; ObjectID = "nOQ-X6-AmV"; */
+"nOQ-X6-AmV.text" = "Find Co-Working spaces\nis an easy task with us.";
+
+/* Class = "UIButton"; normalTitle = "Sign Out"; ObjectID = "pfU-zV-zez"; */
+"pfU-zV-zez.normalTitle" = "تسجيل الخروج";
+
+/* Class = "UILabel"; text = "  Email"; ObjectID = "pyH-e3-8hm"; */
+"pyH-e3-8hm.text" = "  الايميل  ";
+
+/* Class = "UIButton"; normalTitle = " Back"; ObjectID = "rQo-fl-4Xb"; */
+"rQo-fl-4Xb.normalTitle" = " الى الخلف";
+
+/* Class = "UIButton"; normalTitle = "Reset Password"; ObjectID = "sF0-iU-awL"; */
+"sF0-iU-awL.normalTitle" = "تغيير كلمه السر";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "tNk-2Y-TfE"; */
+"tNk-2Y-TfE.normalTitle" = "التالي";
+
+/* Class = "UILabel"; text = "Enter your account so you can search\nand book your time at your favorite space."; ObjectID = "tgf-uD-187"; */
+"tgf-uD-187.text" = "Enter your account so you can search\nand book your time at your favorite space.";
+
+/* Class = "UIButton"; normalTitle = " Back"; ObjectID = "trd-SW-cPM"; */
+"trd-SW-cPM.normalTitle" = " الى الخلف";
+
+/* Class = "UILabel"; text = "Popular Spaces"; ObjectID = "vEd-q5-msN"; */
+"vEd-q5-msN.text" = "Popular Spaces";
+
+/* Class = "UILabel"; text = "Hi, Mo Saber"; ObjectID = "xvZ-y7-bKN"; */
+"xvZ-y7-bKN.text" = "مرحبا محمد";
+
+/* Class = "UILabel"; text = "Spaound your spaces are always around"; ObjectID = "yYs-l0-WOc"; */
+"yYs-l0-WOc.text" = "Spaound your spaces are always around";

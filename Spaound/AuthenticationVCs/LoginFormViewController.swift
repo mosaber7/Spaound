@@ -15,6 +15,9 @@ class LoginFormViewController: UIViewController {
     @IBOutlet weak var resetPasswordLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var emailSVContainer: UIStackView!
+    @IBOutlet weak var passwordSVContainer: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         resetPasswordLabel.textColor = UIColor(named: "mainLabelColor")
@@ -23,11 +26,16 @@ class LoginFormViewController: UIViewController {
         resetPasswordLabel.isUserInteractionEnabled = true
         resetPasswordLabel.addGestureRecognizer(tap)
         
+      //  to flip the position of the text field in the stackView
+    //    emailSVContainer.addArrangedSubview(self.emailSVContainer.subviews[0])
+        
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
         loginButton.layer.cornerRadius = 16
+        passwordSVContainer.layer.cornerRadius = 16
+        emailSVContainer.layer.cornerRadius = 16
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

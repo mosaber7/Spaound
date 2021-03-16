@@ -10,6 +10,7 @@ import UIKit
 class RestorePasswordViewController: UIViewController {
 
     @IBOutlet weak var resetPasswordButton: UIButton!
+    @IBOutlet weak var emailContainer: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -17,6 +18,7 @@ class RestorePasswordViewController: UIViewController {
         super.viewWillLayoutSubviews()
         
         resetPasswordButton.layer.cornerRadius = 16
+        emailContainer.layer.cornerRadius = 16
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
