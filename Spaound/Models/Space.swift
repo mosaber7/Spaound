@@ -13,6 +13,7 @@ struct Space: Codable {
     var rating: String
     var beforeDiscountPrice: Int?
     var price: Int
+    var wifi: Bool
     var imageUrl: String
     
 }

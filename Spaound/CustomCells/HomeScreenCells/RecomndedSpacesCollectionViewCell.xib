@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecomndedSpacesCollectionViewCell" id="gTV-IL-0wX" customClass="RecomndedSpacesCollectionViewCell" customModule="Spaound" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="230"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="230"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Mq-FW-NJT" userLabel="Container">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="230"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card1" translatesAutoresizingMaskIntoConstraints="NO" id="MpF-9V-eCV">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="230"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starubaku Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1n-wi-gbX">
+                                <rect key="frame" x="16" y="130" width="141.5" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <color key="textColor" name="White"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zO1-Rf-sWf">
+                                <rect key="frame" x="16" y="159" width="46.5" height="22"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="L.E 25">
+                                        <attributes>
+                                            <color key="NSColor" name="White"/>
+                                            <font key="NSFont" size="16" name="Avenir-Heavy"/>
+                                            <font key="NSOriginalFont" size="16" name="Avenir-Heavy"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="0Ma-9e-c5W" userLabel="Wifi Stack View">
+                                <rect key="frame" x="16" y="189" width="80" height="32"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yjv-XZ-EG9">
+                                        <rect key="frame" x="0.0" y="9.5" width="20" height="13"/>
+                                        <color key="tintColor" name="White"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="D5U-KZ-FK9"/>
+                                        </constraints>
+                                        <imageReference key="image" image="wifi" catalog="system" symbolScale="small"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="thin"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free wifi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyx-v7-OR7">
+                                        <rect key="frame" x="24" y="8" width="56" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" name="White"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Fyl-Du-8Pb"/>
+                                    <constraint firstAttribute="width" constant="80" id="aeT-hI-DWt"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zys-Zi-Y4Q" userLabel="Sound Stack View">
+                                <rect key="frame" x="112" y="189" width="70" height="32"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fsF-ir-DYM">
+                                        <rect key="frame" x="0.0" y="9.5" width="20" height="14"/>
+                                        <color key="tintColor" name="White"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="wjA-M7-afV"/>
+                                        </constraints>
+                                        <imageReference key="image" image="speaker.slash.fill.rtl" catalog="system" symbolScale="small"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="thin"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nL-8n-mMN">
+                                        <rect key="frame" x="24" y="8" width="46" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" name="White"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="jUV-Th-sRx"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="MP3-8m-mkl"/>
+                                    <constraint firstAttribute="height" constant="32" id="veO-f1-hmA"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sfi-N4-Dt6">
+                                <rect key="frame" x="66.5" y="159" width="34.5" height="22"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                <color key="textColor" name="White"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MpF-9V-eCV" firstAttribute="top" secondItem="5Mq-FW-NJT" secondAttribute="top" id="1uc-Qh-eit"/>
+                            <constraint firstItem="Sfi-N4-Dt6" firstAttribute="top" secondItem="zO1-Rf-sWf" secondAttribute="top" id="6w5-c5-C6q"/>
+                            <constraint firstItem="0Ma-9e-c5W" firstAttribute="leading" secondItem="zO1-Rf-sWf" secondAttribute="leading" id="9TA-ic-2X6"/>
+                            <constraint firstItem="zO1-Rf-sWf" firstAttribute="leading" secondItem="F1n-wi-gbX" secondAttribute="leading" id="BED-W6-6RK"/>
+                            <constraint firstItem="zys-Zi-Y4Q" firstAttribute="top" secondItem="0Ma-9e-c5W" secondAttribute="top" id="Cd9-ua-oPa"/>
+                            <constraint firstAttribute="width" constant="280" id="CfA-zz-Fa8"/>
+                            <constraint firstItem="Sfi-N4-Dt6" firstAttribute="bottom" secondItem="zO1-Rf-sWf" secondAttribute="bottom" id="JfF-zD-8jp"/>
+                            <constraint firstAttribute="trailing" secondItem="MpF-9V-eCV" secondAttribute="trailing" id="KP9-Cf-QbS"/>
+                            <constraint firstItem="zys-Zi-Y4Q" firstAttribute="leading" secondItem="0Ma-9e-c5W" secondAttribute="trailing" constant="16" id="L5c-HH-YSt"/>
+                            <constraint firstItem="F1n-wi-gbX" firstAttribute="top" secondItem="5Mq-FW-NJT" secondAttribute="top" constant="130" id="ReY-2S-dnJ"/>
+                            <constraint firstAttribute="height" constant="230" id="bmD-6u-NTD"/>
+                            <constraint firstItem="MpF-9V-eCV" firstAttribute="leading" secondItem="5Mq-FW-NJT" secondAttribute="leading" id="iik-vN-Tz5"/>
+                            <constraint firstItem="Sfi-N4-Dt6" firstAttribute="leading" secondItem="zO1-Rf-sWf" secondAttribute="trailing" constant="4" id="jPz-5M-j3e"/>
+                            <constraint firstItem="0Ma-9e-c5W" firstAttribute="top" secondItem="zO1-Rf-sWf" secondAttribute="bottom" constant="8" id="mi9-eY-3gQ"/>
+                            <constraint firstItem="F1n-wi-gbX" firstAttribute="leading" secondItem="5Mq-FW-NJT" secondAttribute="leading" constant="16" id="nSr-R2-Ba7"/>
+                            <constraint firstAttribute="bottom" secondItem="MpF-9V-eCV" secondAttribute="bottom" id="sjO-lf-S90"/>
+                            <constraint firstItem="zO1-Rf-sWf" firstAttribute="top" secondItem="F1n-wi-gbX" secondAttribute="bottom" constant="4" id="u49-B8-Wlo"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5Mq-FW-NJT" secondAttribute="bottom" id="O4K-Un-sV7"/>
+                <constraint firstItem="5Mq-FW-NJT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kMQ-MY-qXr"/>
+                <constraint firstItem="5Mq-FW-NJT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wl4-3Q-Ky2"/>
+                <constraint firstAttribute="trailing" secondItem="5Mq-FW-NJT" secondAttribute="trailing" id="xtp-7G-Lcj"/>
+            </constraints>
+            <size key="customSize" width="280" height="230"/>
+            <connections>
+                <outlet property="ContainerView" destination="5Mq-FW-NJT" id="TyA-w4-sfg"/>
+                <outlet property="nameLAbel" destination="F1n-wi-gbX" id="gdT-vX-y3n"/>
+                <outlet property="priceLabel" destination="zO1-Rf-sWf" id="XNi-lx-IEK"/>
+                <outlet property="soundViewContainer" destination="zys-Zi-Y4Q" id="XsG-Vj-7OC"/>
+                <outlet property="wifiViewContainer" destination="0Ma-9e-c5W" id="xa9-Jl-fnR"/>
+            </connections>
+            <point key="canvasLocation" x="178.2608695652174" y="121.20535714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Card1" width="414" height="300"/>
+        <image name="speaker.slash.fill.rtl" catalog="system" width="124" height="128"/>
+        <image name="wifi" catalog="system" width="128" height="91"/>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
