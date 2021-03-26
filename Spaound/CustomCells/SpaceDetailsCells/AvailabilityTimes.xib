@@ -143,6 +143,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="fridayLabel" destination="t6G-OF-3NX" id="FFZ-jl-aWx"/>
+                <outlet property="mondayLabel" destination="H9t-7R-ggv" id="72v-24-N8E"/>
+                <outlet property="saturdayLabel" destination="ae3-j2-eqv" id="9ce-Cm-1Rn"/>
+                <outlet property="sundayLabel" destination="WMI-Mc-IGw" id="QGe-XU-DGF"/>
+                <outlet property="thursedayLabel" destination="wFa-BH-wLz" id="dgk-mR-aYX"/>
+                <outlet property="tuesdayLabel" destination="v2L-gF-sUT" id="LU9-e0-Lky"/>
+                <outlet property="wednsedayLabel" destination="l2x-De-Qdx" id="iGD-8k-fmW"/>
+            </connections>
             <point key="canvasLocation" x="146.37681159420291" y="121.875"/>
         </tableViewCell>
     </objects>

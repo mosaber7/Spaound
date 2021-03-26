@@ -19,23 +19,12 @@ class PopularSpacesViewController: UIViewController {
         tableView.registerNib(cell: PopularSpacesTableViewCell.self)
         tableView.delegate = self
         tableView.dataSource = self
-        fetchSpaces()
         
 
     }
     
     
-    func fetchSpaces(){
-        WebServices.getJson { (spaces, error) in
-            if let error = error{
-                print(error)
-                return
-            }
-            self.spaces = spaces!
-            self.tableView.reloadData()
-            
-        }
-    }
+ 
     @IBAction func backButtonTapped(_ sender: Any) {
         
         self.dismiss(animated: true, completion: nil)
@@ -57,9 +46,10 @@ extension PopularSpacesViewController: UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailVC = self.storyboard?.instantiateViewController(identifier: "Details")
-        detailVC?.modalPresentationStyle = .fullScreen
-        present(detailVC!, animated: true, completion: nil)
+        let detailVC = self.storyboard?.instantiateViewController(identifier: "Details") as! DetailsViewController
+        detailVC.space = spaces[indexPath.row]
+        detailVC.modalPresentationStyle = .fullScreen
+        present(detailVC, animated: true, completion: nil)
     }
     
     

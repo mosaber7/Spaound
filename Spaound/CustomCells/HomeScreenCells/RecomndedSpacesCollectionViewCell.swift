@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RecomndedSpacesCollectionViewCell: UICollectionViewCell {
     
@@ -15,6 +16,8 @@ class RecomndedSpacesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var soundViewContainer: UIView!
     @IBOutlet weak var wifiViewContainer: UIView!
     @IBOutlet weak var ContainerView: UIView!
+    @IBOutlet weak var spaceImageView: UIImageView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,13 +32,19 @@ class RecomndedSpacesCollectionViewCell: UICollectionViewCell {
         soundViewContainer.layer.cornerRadius = 16
         wifiViewContainer?.layer.cornerRadius = 16
         ContainerView.layer.cornerRadius = 16
-        cellConfig()
         
         
     }
     
-    func cellConfig(){
+    func Config(){
         nameLAbel.text = space.name
+        spinner.startAnimating()
+        if let imageURL = URL(string: space.imageUrl){
+        spaceImageView.kf.setImage(with: imageURL)
+            spinner.isHidden = true
+            spinner.stopAnimating()
+            
+        }
         if let discountedPrice =  space.beforeDiscountPrice {
             priceLabel.text = "L.E \(discountedPrice)"
         }else{
@@ -46,5 +55,6 @@ class RecomndedSpacesCollectionViewCell: UICollectionViewCell {
             wifiViewContainer.isHidden = true
         }
     }
+  
     
 }

@@ -8,16 +8,48 @@
 import UIKit
 
 class AmenitiesCell: UITableViewCell {
-
+    var space: Space!
+    
+    @IBOutlet weak var freeWifiContiner: UIView!
+    @IBOutlet weak var libraryBookContainer: UIView!
+    @IBOutlet weak var gamesRoomContainer: UIView!
+    
+    @IBOutlet weak var coffeeContainer: UIView!
+    @IBOutlet weak var meetingRoomContiner: UIView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+    }
+    func config() {
+        if freeWifiContiner != nil, !space.amenities.freeWifi {
+            freeWifiContiner.removeFromSuperview()
+        }
+        if libraryBookContainer != nil,!space.amenities.libraryBook {
+            libraryBookContainer.removeFromSuperview()
+        }
+        if gamesRoomContainer != nil,!space.amenities.gamesRoom{
+            gamesRoomContainer.removeFromSuperview()
+        }
+        if coffeeContainer != nil ,!space.amenities.Coffee{
+            coffeeContainer.removeFromSuperview()
+        }
+        if meetingRoomContiner != nil, !space.amenities.meetingRoom{
+            meetingRoomContiner.removeFromSuperview()
+        }
+        
     }
     
 }

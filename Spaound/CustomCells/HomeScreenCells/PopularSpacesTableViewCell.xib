@@ -23,10 +23,15 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card1" translatesAutoresizingMaskIntoConstraints="NO" id="Zln-pp-hYX">
                                 <rect key="frame" x="0.0" y="0.0" width="80" height="120"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ruo-f3-tdL">
+                                <rect key="frame" x="30" y="50" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Zln-pp-hYX" secondAttribute="trailing" id="BK4-RT-oOw"/>
+                            <constraint firstItem="Ruo-f3-tdL" firstAttribute="centerX" secondItem="bsD-Mj-kfv" secondAttribute="centerX" id="Bx1-vz-Jjz"/>
+                            <constraint firstItem="Ruo-f3-tdL" firstAttribute="centerY" secondItem="bsD-Mj-kfv" secondAttribute="centerY" id="FjV-4D-OjP"/>
                             <constraint firstAttribute="width" constant="80" id="Pmb-zm-TVO"/>
                             <constraint firstItem="Zln-pp-hYX" firstAttribute="leading" secondItem="bsD-Mj-kfv" secondAttribute="leading" id="aQX-hj-cBX"/>
                             <constraint firstAttribute="bottom" secondItem="Zln-pp-hYX" secondAttribute="bottom" id="q4o-4G-37c"/>
@@ -78,7 +83,7 @@
                                 <color key="textColor" name="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HhC-J9-pKO">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HhC-J9-pKO" customClass="CosmosView" customModule="Cosmos">
                                 <rect key="frame" x="0.0" y="60" width="493" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -167,10 +172,18 @@
                 <outlet property="nameLabel" destination="kDP-TQ-Ty6" id="HHw-g5-cU7"/>
                 <outlet property="priceLabel" destination="rbC-dt-v3F" id="kFj-UK-SRQ"/>
                 <outlet property="ratingStarsContainer" destination="HhC-J9-pKO" id="4yH-PG-mCH"/>
+                <outlet property="ratingView" destination="HhC-J9-pKO" id="GR5-Yv-lJf"/>
+                <outlet property="spaceImageView" destination="Zln-pp-hYX" id="73C-xv-QDD"/>
+                <outlet property="spinner" destination="Ruo-f3-tdL" id="yqt-Uc-lV0"/>
             </connections>
             <point key="canvasLocation" x="331.15942028985512" y="173.4375"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="HhC-J9-pKO">
+            <size key="intrinsicContentSize" width="120" height="20"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Card1" width="414" height="300"/>
         <image name="discountImage" width="42" height="42"/>

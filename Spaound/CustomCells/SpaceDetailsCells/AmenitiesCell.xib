@@ -17,13 +17,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="476" height="246"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FPp-KF-R31">
-                        <rect key="frame" x="20" y="11" width="436" height="64"/>
+                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="FPp-KF-R31">
+                        <rect key="frame" x="20" y="11" width="436" height="224"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BAe-hu-OHz">
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BAe-hu-OHz">
                                 <rect key="frame" x="0.0" y="0.0" width="218" height="64"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJN-3X-vfr">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJN-3X-vfr">
                                         <rect key="frame" x="0.0" y="0.0" width="218" height="16"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oEy-Db-jDW">
@@ -55,7 +55,7 @@
                                             <constraint firstAttribute="bottom" secondItem="wFn-Xa-gZR" secondAttribute="bottom" id="uuH-89-fT2"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ff3-SI-YuJ">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ff3-SI-YuJ">
                                         <rect key="frame" x="0.0" y="24" width="218" height="16"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="books.vertical" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Isi-VF-Aa4">
@@ -87,7 +87,7 @@
                                             <constraint firstItem="W9h-Oh-6wJ" firstAttribute="top" secondItem="Ff3-SI-YuJ" secondAttribute="top" id="FuJ-3l-U6v"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuU-2d-TYa">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuU-2d-TYa">
                                         <rect key="frame" x="0.0" y="48" width="218" height="16"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gamecontroller" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IF6-d5-86q">
@@ -121,10 +121,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wcr-5b-kVd">
-                                <rect key="frame" x="218" y="0.0" width="218" height="64"/>
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wcr-5b-kVd">
+                                <rect key="frame" x="218" y="0.0" width="218" height="40"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaI-J6-P7b">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaI-J6-P7b">
                                         <rect key="frame" x="0.0" y="0.0" width="218" height="16"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eyes" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XoM-0B-Qhq">
@@ -156,7 +156,7 @@
                                             <constraint firstItem="TA3-Je-9bY" firstAttribute="height" secondItem="XoM-0B-Qhq" secondAttribute="height" id="o12-KE-9ql"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9z-2O-cMj">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9z-2O-cMj">
                                         <rect key="frame" x="0.0" y="24" width="218" height="16"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personalhotspot" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lsP-TT-aC8">
@@ -188,38 +188,6 @@
                                             <constraint firstAttribute="bottom" secondItem="lsP-TT-aC8" secondAttribute="bottom" id="rKD-y3-ceJ"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICM-U9-4aq">
-                                        <rect key="frame" x="0.0" y="48" width="218" height="16"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cTM-Iy-dvD">
-                                                <rect key="frame" x="0.0" y="2" width="20" height="12"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" name="secondaryLabelColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="16" id="Jfz-37-dY3"/>
-                                                    <constraint firstAttribute="width" constant="20" id="YNN-Im-Irn"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free Wifi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YA-Kv-NCS">
-                                                <rect key="frame" x="36" y="0.0" width="182" height="16"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
-                                                <color key="textColor" name="secondaryLabelColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="1YA-Kv-NCS" firstAttribute="leading" secondItem="cTM-Iy-dvD" secondAttribute="trailing" constant="16" id="1wt-f4-FeG"/>
-                                            <constraint firstItem="1YA-Kv-NCS" firstAttribute="top" secondItem="ICM-U9-4aq" secondAttribute="top" id="LWP-sm-qYi"/>
-                                            <constraint firstItem="cTM-Iy-dvD" firstAttribute="leading" secondItem="ICM-U9-4aq" secondAttribute="leading" id="N69-aW-J82"/>
-                                            <constraint firstItem="cTM-Iy-dvD" firstAttribute="top" secondItem="ICM-U9-4aq" secondAttribute="top" id="cZG-uq-EhH"/>
-                                            <constraint firstAttribute="trailing" secondItem="1YA-Kv-NCS" secondAttribute="trailing" id="cih-d6-nYo"/>
-                                            <constraint firstAttribute="bottom" secondItem="1YA-Kv-NCS" secondAttribute="bottom" id="nEI-bY-EMS"/>
-                                            <constraint firstAttribute="bottom" secondItem="cTM-Iy-dvD" secondAttribute="bottom" id="qi7-7P-EHs"/>
-                                            <constraint firstItem="1YA-Kv-NCS" firstAttribute="height" secondItem="cTM-Iy-dvD" secondAttribute="height" id="uqG-cQ-GaX"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
@@ -236,6 +204,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="coffeeContainer" destination="XaI-J6-P7b" id="tJR-pZ-nJY"/>
+                <outlet property="freeWifiContiner" destination="cJN-3X-vfr" id="fsX-yo-40r"/>
+                <outlet property="gamesRoomContainer" destination="zuU-2d-TYa" id="O1P-g2-eK7"/>
+                <outlet property="libraryBookContainer" destination="Ff3-SI-YuJ" id="XWs-9M-DzG"/>
+                <outlet property="meetingRoomContiner" destination="T9z-2O-cMj" id="Fbv-cl-iWf"/>
+            </connections>
             <point key="canvasLocation" x="244.92753623188409" y="145.3125"/>
         </tableViewCell>
     </objects>

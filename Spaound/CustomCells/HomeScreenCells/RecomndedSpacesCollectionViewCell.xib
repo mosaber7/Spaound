@@ -23,6 +23,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card1" translatesAutoresizingMaskIntoConstraints="NO" id="MpF-9V-eCV">
                                 <rect key="frame" x="0.0" y="0.0" width="280" height="230"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starubaku Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1n-wi-gbX">
                                 <rect key="frame" x="16" y="130" width="141.5" height="25"/>
@@ -100,11 +101,15 @@
                                 <color key="textColor" name="White"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="tVG-Q0-jsV">
+                                <rect key="frame" x="130" y="105" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="MpF-9V-eCV" firstAttribute="top" secondItem="5Mq-FW-NJT" secondAttribute="top" id="1uc-Qh-eit"/>
                             <constraint firstItem="Sfi-N4-Dt6" firstAttribute="top" secondItem="zO1-Rf-sWf" secondAttribute="top" id="6w5-c5-C6q"/>
+                            <constraint firstItem="tVG-Q0-jsV" firstAttribute="centerX" secondItem="5Mq-FW-NJT" secondAttribute="centerX" id="88B-iZ-hi9"/>
                             <constraint firstItem="0Ma-9e-c5W" firstAttribute="leading" secondItem="zO1-Rf-sWf" secondAttribute="leading" id="9TA-ic-2X6"/>
                             <constraint firstItem="zO1-Rf-sWf" firstAttribute="leading" secondItem="F1n-wi-gbX" secondAttribute="leading" id="BED-W6-6RK"/>
                             <constraint firstItem="zys-Zi-Y4Q" firstAttribute="top" secondItem="0Ma-9e-c5W" secondAttribute="top" id="Cd9-ua-oPa"/>
@@ -114,6 +119,7 @@
                             <constraint firstItem="zys-Zi-Y4Q" firstAttribute="leading" secondItem="0Ma-9e-c5W" secondAttribute="trailing" constant="16" id="L5c-HH-YSt"/>
                             <constraint firstItem="F1n-wi-gbX" firstAttribute="top" secondItem="5Mq-FW-NJT" secondAttribute="top" constant="130" id="ReY-2S-dnJ"/>
                             <constraint firstAttribute="height" constant="230" id="bmD-6u-NTD"/>
+                            <constraint firstItem="tVG-Q0-jsV" firstAttribute="centerY" secondItem="5Mq-FW-NJT" secondAttribute="centerY" id="eom-ZE-yFg"/>
                             <constraint firstItem="MpF-9V-eCV" firstAttribute="leading" secondItem="5Mq-FW-NJT" secondAttribute="leading" id="iik-vN-Tz5"/>
                             <constraint firstItem="Sfi-N4-Dt6" firstAttribute="leading" secondItem="zO1-Rf-sWf" secondAttribute="trailing" constant="4" id="jPz-5M-j3e"/>
                             <constraint firstItem="0Ma-9e-c5W" firstAttribute="top" secondItem="zO1-Rf-sWf" secondAttribute="bottom" constant="8" id="mi9-eY-3gQ"/>
@@ -138,6 +144,8 @@
                 <outlet property="nameLAbel" destination="F1n-wi-gbX" id="gdT-vX-y3n"/>
                 <outlet property="priceLabel" destination="zO1-Rf-sWf" id="XNi-lx-IEK"/>
                 <outlet property="soundViewContainer" destination="zys-Zi-Y4Q" id="XsG-Vj-7OC"/>
+                <outlet property="spaceImageView" destination="MpF-9V-eCV" id="drY-bO-bHv"/>
+                <outlet property="spinner" destination="tVG-Q0-jsV" id="j3T-Ey-27a"/>
                 <outlet property="wifiViewContainer" destination="0Ma-9e-c5W" id="xa9-Jl-fnR"/>
             </connections>
             <point key="canvasLocation" x="178.2608695652174" y="121.20535714285714"/>

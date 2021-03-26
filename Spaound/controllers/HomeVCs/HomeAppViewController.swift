@@ -37,6 +37,8 @@ class HomeAppViewController: UIViewController{
                 return
             }
             self.spaces = spaces!
+            
+            print(spaces!)
             self.popularSpacesTV.reloadData()
             self.rcmndedSpcsCollectionView.reloadData()
             
@@ -49,7 +51,7 @@ class HomeAppViewController: UIViewController{
     
     @IBAction func seeAllTApped(_ sender: Any) {
         let popularSpacesVC = self.storyboard?.instantiateViewController(identifier: "PopularSpacesViewController") as! PopularSpacesViewController
-        
+        popularSpacesVC.spaces = spaces
         popularSpacesVC.modalPresentationStyle = .fullScreen
         self.present(popularSpacesVC, animated: true, completion: nil)
         
@@ -72,7 +74,7 @@ extension HomeAppViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         let cell = rcmndedSpcsCollectionView.dequeue(indexPath: indexPath) as RecomndedSpacesCollectionViewCell
         cell.space = space
-        
+        cell.Config()
         return cell
         
         
@@ -82,14 +84,13 @@ extension HomeAppViewController: UICollectionViewDelegate, UICollectionViewDataS
         return rcmndedSpcsCollectionView.frame.size
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailVC = self.storyboard?.instantiateViewController(identifier: "Details")
-        detailVC?.modalPresentationStyle = .fullScreen
-        present(detailVC!, animated: true, completion: nil)
+        let detailVC = self.storyboard?.instantiateViewController(identifier: "Details") as! DetailsViewController
+        detailVC.space = spaces[indexPath.row]
+        detailVC.modalPresentationStyle = .fullScreen
+        self.present(detailVC, animated: true, completion: nil)
     }
     
-    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        false
-    }
+    
     
 }
 
@@ -105,18 +106,17 @@ extension HomeAppViewController: UITableViewDelegate, UITableViewDataSource{
         let space = spaces[indexPath.row]
         let cell = popularSpacesTV.dequeue() as PopularSpacesTableViewCell
         cell.space = space
+        cell.Config()
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailVC = self.storyboard?.instantiateViewController(identifier: "Details")
-        detailVC?.modalPresentationStyle = .fullScreen
-        present(detailVC!, animated: true, completion: nil)
+        let detailVC = self.storyboard?.instantiateViewController(identifier: "Details") as! DetailsViewController
+        detailVC.space = spaces[indexPath.row]
+        detailVC.modalPresentationStyle = .fullScreen
+        self.present(detailVC, animated: true, completion: nil)
     }
     
-    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        false
-    }
-    
+   
 }
 
 

@@ -8,16 +8,24 @@
 import UIKit
 
 class AboutSpaceCell: UITableViewCell {
-
+    @IBOutlet weak var aboutLabel: UILabel!
+    
+    var space: Space!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    //    aboutLabel.text = space.about
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+    }
+    func config(){
+        aboutLabel.text = space.about
+    }
 }

@@ -36,6 +36,9 @@ different companies share an office space</string>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="aboutLabel" destination="dX4-Zu-Z9u" id="n0q-B1-1xo"/>
+            </connections>
             <point key="canvasLocation" x="132" y="88"/>
         </tableViewCell>
     </objects>

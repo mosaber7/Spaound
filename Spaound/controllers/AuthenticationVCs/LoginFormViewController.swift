@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 
 class LoginFormViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var resetPasswordLabel: UILabel!
@@ -17,6 +17,7 @@ class LoginFormViewController: UIViewController {
     
     @IBOutlet weak var emailSVContainer: UIStackView!
     @IBOutlet weak var passwordSVContainer: UIStackView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +26,6 @@ class LoginFormViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(resetPasswordTapped(_:)))
         resetPasswordLabel.isUserInteractionEnabled = true
         resetPasswordLabel.addGestureRecognizer(tap)
-        
-      //  to flip the position of the text field in the stackView
-    //    emailSVContainer.addArrangedSubview(self.emailSVContainer.subviews[0])
         
     }
     override func viewWillLayoutSubviews() {
@@ -38,10 +36,9 @@ class LoginFormViewController: UIViewController {
         emailSVContainer.layer.cornerRadius = 16
     }
     
-    @IBAction func backButtonTapped(_ sender: Any) {
-        
-    navigationController?.popViewController(animated: true)
-    }
+    
+    
+    
     
     @objc func resetPasswordTapped(_ sender: UITapGestureRecognizer){
         
@@ -51,36 +48,50 @@ class LoginFormViewController: UIViewController {
         self.present(verfiyPassVC, animated: true, completion: nil)
     }
     
-    @IBAction func loginTapped(_ sender: Any) {
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
         
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
+    @IBAction func loginTapped(_ sender: Any) {
+        loginButton.isHidden = true
+        loginButton.isUserInteractionEnabled = false
+        spinner.isHidden = false
+        spinner.startAnimating()
         guard let email = emailTextField.text, let password = passwordTextField.text else {
             return
+        }
+        if !isValidEmailAddress(emailAddressString: email){
+            showAlert(message: "please insert a valid mail form: mo@example.com")
         }
         
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error == nil{
-                print("success")
+                let homeAppVC = self.storyboard?.instantiateViewController(identifier: "Home")
+                homeAppVC?.modalTransitionStyle = .crossDissolve
+                homeAppVC?.modalPresentationStyle = .fullScreen
+                self.present(homeAppVC!, animated: true, completion: nil)
             }else{
-                self.showAlert(message: "something is Wrong")
+                self.showAlert(message: "please recheck your data")
+                self.loginButton.isHidden = false
+                self.loginButton.isUserInteractionEnabled = true
+                self.spinner.isHidden = true
+                self.spinner.stopAnimating()
                 
             }
         }
         
-        
     }
     
-    func showAlert(message: String){
-        
-        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        
-        let cancelAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-        alert.addAction(cancelAction)
-        present(alert, animated: true, completion: nil)
-        
-    }
+    
+    
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    
 }
 
 //handling the keyboard extension
@@ -96,4 +107,44 @@ extension LoginFormViewController: UITextFieldDelegate{
         super.viewWillDisappear(animated)
         view.endEditing(true)
     }
+}
+
+
+extension LoginFormViewController{
+    func showAlert(message: String){
+        
+        let alert = UIAlertController(title: "Notification", message: message, preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        present(alert, animated: true) {
+            self.passwordTextField.text = ""
+        }
+        
+    }
+    func isValidEmailAddress(emailAddressString: String) -> Bool {
+      
+      var returnValue = true
+      let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+      
+      do {
+          let regex = try NSRegularExpression(pattern: emailRegEx)
+          let nsString = emailAddressString as NSString
+          let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+          
+          if results.count == 0
+          {
+              returnValue = false
+          }
+          
+      } catch let error as NSError {
+          print("invalid regex: \(error.localizedDescription)")
+          returnValue = false
+      }
+      
+      return  returnValue
+  }
+    
+    
+    
 }

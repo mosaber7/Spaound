@@ -25,6 +25,17 @@ class VerifyPhoneViewController: UIViewController {
     }
     
     @IBAction func createAccountTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "account Created Successfully", message: nil, preferredStyle: .alert)
+        let dismissaction = UIAlertAction(title: "Dismiss", style: .default, handler: { (UIAlertAction) in
+            
+            let loginVC = self.storyboard?.instantiateViewController(identifier: "LoginForm") as! LoginFormViewController
+            
+            self.navigationController?.pushViewController(loginVC, animated: true)
+        })
+        alert.addAction(dismissaction)
+        self.present(alert, animated: true, completion: nil)
+      
+        
     }
     
     

@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 
 class RegisterFormViewController: UIViewController {
+    
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
@@ -18,6 +20,7 @@ class RegisterFormViewController: UIViewController {
     @IBOutlet weak var emailContainer: UIStackView!
     @IBOutlet weak var phoneContainer: UIStackView!
     @IBOutlet weak var passwordContainer: UIStackView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,10 @@ class RegisterFormViewController: UIViewController {
         emailContainer.layer.cornerRadius = 16
         phoneContainer.layer.cornerRadius = 16
         passwordContainer.layer.cornerRadius = 16
+        
     }
+    
+    
     
     @IBAction func backButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
@@ -37,13 +43,30 @@ class RegisterFormViewController: UIViewController {
     }
     
     @IBAction func continueButtonTapped(_ sender: Any) {
-        guard let username = usernameTextField.text, let email = emailTextField.text, let phoneNumber = phoneTextField.text, let password = passwordTextField.text else {
+        
+        
+        guard let username = usernameTextField.text,username != "", let email = emailTextField.text, email != "", let phoneNumber = phoneTextField.text, phoneNumber != "", let password = passwordTextField.text, password != "" else {
+            
             return
         }
+        if !isValidEmailAddress(emailAddressString: email){
+            showAlert(message: "please insert a valid mail form: mo@example.com")
+        }
+        
+        continueButton.isHidden = true
+        continueButton.isUserInteractionEnabled = false
+        spinner.isHidden = false
+        spinner.startAnimating()
         
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-            guard let _ = error else{
-                preconditionFailure("error with tha auth fn in the database")
+            if let error = error {
+                self.continueButton.isHidden = false
+                self.continueButton.isUserInteractionEnabled = true
+                self.spinner.isHidden = true
+                self.spinner.stopAnimating()
+                
+                print("error in the regrestration fn: \(error)")
+                
             }
             guard let userID = result?.user.uid else {
                 return
@@ -79,4 +102,41 @@ extension RegisterFormViewController: UITextFieldDelegate{
         
         view.endEditing(true)
     }
+}
+
+extension RegisterFormViewController{
+    
+    func showAlert(message: String){
+        
+        let alert = UIAlertController(title: "Notification", message: message, preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func isValidEmailAddress(emailAddressString: String) -> Bool {
+      
+      var returnValue = true
+      let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+      
+      do {
+          let regex = try NSRegularExpression(pattern: emailRegEx)
+          let nsString = emailAddressString as NSString
+          let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+          
+          if results.count == 0
+          {
+              returnValue = false
+          }
+          
+      } catch let error as NSError {
+          print("invalid regex: \(error.localizedDescription)")
+          returnValue = false
+      }
+      
+      return  returnValue
+  }
+    
 }

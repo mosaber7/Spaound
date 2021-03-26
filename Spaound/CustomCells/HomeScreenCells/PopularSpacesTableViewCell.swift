@@ -7,6 +7,7 @@
 
 import UIKit
 import Cosmos
+import Kingfisher
 
 class PopularSpacesTableViewCell: UITableViewCell {
 
@@ -18,16 +19,15 @@ class PopularSpacesTableViewCell: UITableViewCell {
     @IBOutlet weak var cellContainerView: UIView!
     @IBOutlet weak var discountImageView: UIImageView!
     @IBOutlet weak var beforeDiscountPriceLabel: UILabel!
-
+    @IBOutlet weak var spaceImageView: UIImageView!
+    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     var space: Space!
     
-    lazy var starsView: CosmosView = {
-        let view = CosmosView()
-        return view
-    }()
+    @IBOutlet weak var ratingView: CosmosView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        ratingStarsContainer.addSubview(starsView)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,15 +42,27 @@ class PopularSpacesTableViewCell: UITableViewCell {
         cellContainerView.layer.borderWidth = 1
         cellContainerView.layer.borderColor = UIColor.lightGray.cgColor
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 4, left: 0, bottom: 4, right: 0))
-        cellConfig()
+ 
        
         
 
     }
-    func cellConfig(){
+    func Config(){
         nameLabel.text = space.name
         adressLabel.text = space.address
         priceLabel.text = String(space.price)
+        ratingView.rating = space.rating
+        
+        spinner.isHidden = false
+        spinner.startAnimating()
+        if let imageURL = URL(string: space.imageUrl)
+        {
+            spaceImageView.kf.setImage(with: imageURL)
+            spinner.isHidden = true
+            spinner.stopAnimating()
+            
+        }
+        
         
         if let originalPrice = space.beforeDiscountPrice{
             beforeDiscountPriceLabel.text = String(originalPrice)

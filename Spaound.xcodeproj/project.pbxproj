@@ -259,6 +259,7 @@
 				057F57C925F63D8000A5099F /* StoryBoards */,
 				0555C906260D2E1500395DB2 /* controllers */,
 				05A1FA11260B760C00AC74DB /* Networking */,
+				0555C908260D2E6200395DB2 /* CustomCells */,
 				05A2EEBE25F4EDEC008BEE2F /* Info.plist */,
 				0536358A25FA655F00DBF135 /* GoogleService-Info.plist */,
 				05374D18260A54060046E284 /* Extensions */,
@@ -266,7 +267,6 @@
 				057F57CB25F63DAC00A5099F /* Resources */,
 				057F57CA25F63D9500A5099F /* config */,
 				052DF4AB260105A500C2D7F2 /* Localizable.strings */,
-				0555C908260D2E6200395DB2 /* CustomCells */,
 			);
 			path = Spaound;
 			sourceTree = "<group>";
