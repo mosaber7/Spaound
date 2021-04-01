@@ -10,8 +10,10 @@ import Alamofire
 class WebServices: NSObject {
     static let shared = WebServices()
     
+    private override init() {
+        
+    }
 
-    
        func getJson(completion: @escaping (Result<[Space], ErrorMessage>)-> Void){
         guard let url = URL(string: "http://localhost:3000/spaces/") else{
             return
@@ -21,7 +23,7 @@ class WebServices: NSObject {
             
             case .success(let spaces):
                     completion(.success(spaces))
-            case .failure(let error):
+            case .failure(_):
                     completion(.failure(.invaildResponse))
                     
             }
