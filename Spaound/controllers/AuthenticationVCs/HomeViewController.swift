@@ -37,7 +37,9 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func loginTapped(_ sender: Any) {
-        let loginFormVC = self.storyboard?.instantiateViewController(identifier: "LoginForm") as! LoginFormViewController
+        guard let loginFormVC = self.storyboard?.instantiateViewController(identifier: "LoginForm") as? LoginFormViewController else{
+            fatalError("Can't find LoginForm")
+        }
         
         navigationController?.pushViewController(loginFormVC, animated: true)
         
@@ -46,7 +48,9 @@ class HomeViewController: UIViewController {
     }
     
     @objc func registerTapped(_ sender: UITapGestureRecognizer){
-        let registerVC = self.storyboard?.instantiateViewController(identifier: "RegisterForm") as! RegisterFormViewController
+        guard let registerVC = self.storyboard?.instantiateViewController(identifier: "RegisterForm") as? RegisterFormViewController else{
+            fatalError("Can't find RegisterForm")
+        }
     
         navigationController?.pushViewController(registerVC, animated: true)
     }

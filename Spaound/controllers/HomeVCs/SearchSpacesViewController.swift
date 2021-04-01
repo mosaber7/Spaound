@@ -39,16 +39,16 @@ class SearchSpacesViewController: UIViewController, UISearchBarDelegate {
     }
     
     func fetchSpaces(){
-        WebServices.getJson { (spaces, error) in
-            if let error = error{
+        WebServices.shared.getJson { (result) in
+            switch result{
+            
+            case .success(let spaces):
+                self.spaces = spaces
+            case .failure(let error):
                 print(error)
-                return
             }
-            self.spaces = spaces!
-            self.tableView.reloadData()
-            
-            
         }
+        
     }
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -105,6 +105,15 @@ extension SearchSpacesViewController: UITableViewDelegate, UITableViewDataSource
         cell.Config()
         return cell
         
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("here")
+        guard let detailVC = self.storyboard?.instantiateViewController(identifier: "Details") as? DetailsViewController else{
+            fatalError("can't find DEtails cell")
+        }
+        detailVC.space = filteredSpaces[indexPath.row]
+        detailVC.modalPresentationStyle = .fullScreen
+        self.present(detailVC, animated: true, completion: nil)
     }
     
     

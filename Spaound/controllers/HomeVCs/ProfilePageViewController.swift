@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfilePageViewController: UIViewController {
     var spaces: [Space] = []
@@ -36,11 +37,38 @@ class ProfilePageViewController: UIViewController {
     
 
     @IBAction func signOutTapped(_ sender: Any) {
-     //   getJson()
+        showAlert(message: "Are you sure you want to log out?")
+       
     }
     
         
     }
+
+extension ProfilePageViewController{
+    func showAlert(message: String){
+        
+        let alert = UIAlertController(title: "Notification", message: message, preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        let logoutAction = UIAlertAction(title: "Log out", style: .default) { (UIAlertAction) in
+            try? Auth.auth().signOut()
+            print(Auth.auth().currentUser ?? "no user")
+            
+            let homeVC = self.storyboard?.instantiateViewController(identifier: "HomeNV")
+            homeVC?.modalTransitionStyle = .crossDissolve
+            homeVC?.modalPresentationStyle = .fullScreen
+            self.present(homeVC!, animated: true, completion: nil)
+
+        }
+        
+        alert.addAction(cancelAction)
+        alert.addAction(logoutAction)
+        present(alert, animated: true) {
+        }
+    
+    }
+    
+}
       
     
 

@@ -25,32 +25,40 @@ class HomeAppViewController: UIViewController{
         popularSpacesTV.delegate = self
         popularSpacesTV.registerNib(cell: PopularSpacesTableViewCell.self)
         
-        
-        fetchSpaces()
+        OperationQueue.main.addOperation{
+            self.fetchSpaces()
+            
+        }
    
     }
     
     func fetchSpaces(){
-        WebServices.getJson { (spaces, error) in
-            if let error = error{
-                print(error)
-                return
-            }
-            self.spaces = spaces!
+        
+        WebServices.shared.getJson { (result) in
+            switch result{
             
-            print(spaces!)
+            case .success(let spaces):
+                self.spaces = spaces
+                
+            case .failure(let error):
+                print(error)
+            }
             self.popularSpacesTV.reloadData()
             self.rcmndedSpcsCollectionView.reloadData()
+        }
+            
+            
             
             
         }
-    }
     
     
     
     
     @IBAction func seeAllTApped(_ sender: Any) {
-        let popularSpacesVC = self.storyboard?.instantiateViewController(identifier: "PopularSpacesViewController") as! PopularSpacesViewController
+        guard let popularSpacesVC = self.storyboard?.instantiateViewController(identifier: "PopularSpacesViewController") as? PopularSpacesViewController else{
+            fatalError("Can't find PopularSpacesViewController ")
+        }
         popularSpacesVC.spaces = spaces
         popularSpacesVC.modalPresentationStyle = .fullScreen
         self.present(popularSpacesVC, animated: true, completion: nil)
@@ -66,6 +74,7 @@ extension HomeAppViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         spaces.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -84,7 +93,9 @@ extension HomeAppViewController: UICollectionViewDelegate, UICollectionViewDataS
         return rcmndedSpcsCollectionView.frame.size
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailVC = self.storyboard?.instantiateViewController(identifier: "Details") as! DetailsViewController
+        guard let detailVC = self.storyboard?.instantiateViewController(identifier: "Details") as? DetailsViewController else{
+            fatalError("Can't find Details")
+        }
         detailVC.space = spaces[indexPath.row]
         detailVC.modalPresentationStyle = .fullScreen
         self.present(detailVC, animated: true, completion: nil)
@@ -110,7 +121,9 @@ extension HomeAppViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailVC = self.storyboard?.instantiateViewController(identifier: "Details") as! DetailsViewController
+        guard let detailVC = self.storyboard?.instantiateViewController(identifier: "Details") as? DetailsViewController else{
+            fatalError("Can't find Details")
+        }
         detailVC.space = spaces[indexPath.row]
         detailVC.modalPresentationStyle = .fullScreen
         self.present(detailVC, animated: true, completion: nil)

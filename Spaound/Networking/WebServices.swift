@@ -8,23 +8,22 @@
 import UIKit
 import Alamofire
 class WebServices: NSObject {
-    var spacess: [Space]!
+    static let shared = WebServices()
+    
 
     
-      class func getJson(completion: @escaping (_ spaces: [Space]?, _ error: Error?)-> Void){
-        let url = URL(string: "http://localhost:3000/spaces/")!
+       func getJson(completion: @escaping (Result<[Space], ErrorMessage>)-> Void){
+        guard let url = URL(string: "http://localhost:3000/spaces/") else{
+            return
+        }
         AF.request(url).validate().responseDecodable {(response: DataResponse<[Space], AFError>) in
             switch response.result{
             
             case .success(let spaces):
-                OperationQueue.main.addOperation {
-                    completion(spaces,nil)
-                }
+                    completion(.success(spaces))
             case .failure(let error):
-                OperationQueue.main.addOperation {
-                    completion(nil, error)
+                    completion(.failure(.invaildResponse))
                     
-                }
             }
             
         }
@@ -32,18 +31,7 @@ class WebServices: NSObject {
         
     }
     
-    func fetchSpaces(){
-        
-        WebServices.getJson { (spaces, error) in
-            if let error = error{
-                preconditionFailure("\(error)")
-            }
-            
-            self.spacess = spaces!
-        }
-        
-        
-    }
+    
     
     
     

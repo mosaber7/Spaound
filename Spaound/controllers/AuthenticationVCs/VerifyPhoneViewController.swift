@@ -28,7 +28,9 @@ class VerifyPhoneViewController: UIViewController {
         let alert = UIAlertController(title: "account Created Successfully", message: nil, preferredStyle: .alert)
         let dismissaction = UIAlertAction(title: "Dismiss", style: .default, handler: { (UIAlertAction) in
             
-            let loginVC = self.storyboard?.instantiateViewController(identifier: "LoginForm") as! LoginFormViewController
+            guard let loginVC = self.storyboard?.instantiateViewController(identifier: "LoginForm") as? LoginFormViewController else{
+                fatalError("Can't find LoginForm")
+            }
             
             self.navigationController?.pushViewController(loginVC, animated: true)
         })

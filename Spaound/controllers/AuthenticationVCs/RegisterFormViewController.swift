@@ -46,7 +46,7 @@ class RegisterFormViewController: UIViewController {
         
         
         guard let username = usernameTextField.text,username != "", let email = emailTextField.text, email != "", let phoneNumber = phoneTextField.text, phoneNumber != "", let password = passwordTextField.text, password != "" else {
-            
+            showAlert(message: "please fill out all the fields")
             return
         }
         if !isValidEmailAddress(emailAddressString: email){
@@ -81,7 +81,9 @@ class RegisterFormViewController: UIViewController {
         }
         
         
-        let verfiyPhoneVC = self.storyboard?.instantiateViewController(identifier: "VerifyPhoneForm") as! VerifyPhoneViewController
+        guard let verfiyPhoneVC = self.storyboard?.instantiateViewController(identifier: "VerifyPhoneForm") as? VerifyPhoneViewController else{
+            fatalError("Can't find VerifyPhoneForm")
+        }
         
         navigationController?.pushViewController(verfiyPhoneVC, animated: true)    }
     

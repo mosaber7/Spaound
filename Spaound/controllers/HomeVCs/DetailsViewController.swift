@@ -18,6 +18,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var adressLabel: UILabel!
+    @IBOutlet weak var priceLAbel: UILabel!
     
     @IBOutlet weak var priceContiner: UIView!
     
@@ -49,6 +50,7 @@ class DetailsViewController: UIViewController {
         nameLabel.text = space.name
         adressLabel.text = space.address
         ratingView.rating = space.rating
+        priceLAbel.text = String("L.E \(space.price) /day")
         imageView.kf.setImage(with: URL(string: space.imageUrl)!)
     }
     

@@ -42,7 +42,9 @@ class LoginFormViewController: UIViewController {
     
     @objc func resetPasswordTapped(_ sender: UITapGestureRecognizer){
         
-        let verfiyPassVC = self.storyboard?.instantiateViewController(identifier: "RestorePasswordForm") as! RestorePasswordViewController
+        guard let verfiyPassVC = self.storyboard?.instantiateViewController(identifier: "RestorePasswordForm") as? RestorePasswordViewController else{
+            fatalError("Cant find RestorePasswordForm")
+        }
         verfiyPassVC.modalPresentationStyle = .fullScreen
         
         self.present(verfiyPassVC, animated: true, completion: nil)
@@ -57,17 +59,18 @@ class LoginFormViewController: UIViewController {
     
     
     @IBAction func loginTapped(_ sender: Any) {
-        loginButton.isHidden = true
-        loginButton.isUserInteractionEnabled = false
-        spinner.isHidden = false
-        spinner.startAnimating()
-        guard let email = emailTextField.text, let password = passwordTextField.text else {
+       
+        guard let email = emailTextField.text, email != "", let password = passwordTextField.text, password != "" else {
+            showAlert(message: "please fill out all the fields")
             return
         }
         if !isValidEmailAddress(emailAddressString: email){
             showAlert(message: "please insert a valid mail form: mo@example.com")
         }
-        
+        loginButton.isHidden = true
+        loginButton.isUserInteractionEnabled = false
+        spinner.isHidden = false
+        spinner.startAnimating()
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error == nil{
                 let homeAppVC = self.storyboard?.instantiateViewController(identifier: "Home")

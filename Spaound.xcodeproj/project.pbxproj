@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050C18BD26167BA200230B58 /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050C18BC26167BA200230B58 /* ErrorMessages.swift */; };
 		0512904E25F51F8D00681273 /* StartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512904D25F51F8D00681273 /* StartCell.swift */; };
 		0512905725F5510400681273 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512905625F5510400681273 /* HomeViewController.swift */; };
 		052DF4A9260105A500C2D7F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 052DF4AB260105A500C2D7F2 /* Localizable.strings */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050C18BC26167BA200230B58 /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
 		0512904D25F51F8D00681273 /* StartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCell.swift; sourceTree = "<group>"; };
 		0512905625F5510400681273 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		052DF4AA260105A500C2D7F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		050C18BB26167B8700230B58 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				050C18BC26167BA200230B58 /* ErrorMessages.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		0536359B25FAA68B00DBF135 /* HomeVCs */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +269,7 @@
 				057F57C925F63D8000A5099F /* StoryBoards */,
 				0555C906260D2E1500395DB2 /* controllers */,
 				05A1FA11260B760C00AC74DB /* Networking */,
+				050C18BB26167B8700230B58 /* Utilities */,
 				0555C908260D2E6200395DB2 /* CustomCells */,
 				05A2EEBE25F4EDEC008BEE2F /* Info.plist */,
 				0536358A25FA655F00DBF135 /* GoogleService-Info.plist */,
@@ -419,6 +430,7 @@
 				057597EF25F580ED0029E2B3 /* RegisterFormViewController.swift in Sources */,
 				053635CA25FBA68900DBF135 /* Space.swift in Sources */,
 				0536359225FA785400DBF135 /* UICollectionView+Extinsion.swift in Sources */,
+				050C18BD26167BA200230B58 /* ErrorMessages.swift in Sources */,
 				05374D0D260A35F60046E284 /* AvailabilityTimes.swift in Sources */,
 				053635CD25FBAD4600DBF135 /* ProfilePageViewController.swift in Sources */,
 				0512905725F5510400681273 /* HomeViewController.swift in Sources */,

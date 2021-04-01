@@ -9,7 +9,7 @@ import UIKit
 
 class PopularSpacesViewController: UIViewController {
     
-    var spaces = [Space]()
+    var spaces : [Space]!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -43,10 +43,13 @@ extension PopularSpacesViewController: UITableViewDelegate, UITableViewDataSourc
         let space = spaces[indexPath.row]
         let cell = tableView.dequeue() as PopularSpacesTableViewCell
         cell.space = space
+        cell.Config()
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailVC = self.storyboard?.instantiateViewController(identifier: "Details") as! DetailsViewController
+        guard let detailVC = self.storyboard?.instantiateViewController(identifier: "Details") as? DetailsViewController else{
+            fatalError("Can't find Details")
+        }
         detailVC.space = spaces[indexPath.row]
         detailVC.modalPresentationStyle = .fullScreen
         present(detailVC, animated: true, completion: nil)
