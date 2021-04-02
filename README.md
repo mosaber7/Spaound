@@ -65,3 +65,36 @@ the app is implemented using FireBase Authuintcation, Self-made custom RESTful A
 Project inspired by `Swifty-Camp`.
 ## Contact
 Created by [@mosaber](https://www.linkedin.com/in/mohamed-saber-fares/) - feel free to contact me!
+
+
+
+## sample Json responce used
+`[
+    {
+      "name": "Omina Space",
+      "address": "Qeft City, Qena",
+      "beforeDiscountPrice": 250,
+      "price": 180,
+      "wifi": true,
+      "rating": 5,
+      "amenities":{
+        "freeWifi": false,
+        "libraryBook": true,
+        "gamesRoom": true,
+        "Coffee": false,
+        "meetingRoom": true
+      },
+      "about": "Coworking is an arrangement in which workers of different companies share an office space",
+      "availabiltyTimes":{
+        "saturday":"8:00 AM - 12:00 AM",
+        "sunday":"9:00 AM - 12:00 AM",
+        "monday":"10:00 AM - 12:00 AM",
+        "tuesday":"8:00 AM - 12:00 AM",
+        "wednseday":"7:00 AM - 12:00 AM",
+        "thurseday":"6:00 AM - 12:00 AM",
+        "friday":"2:00 AM - 12:00 AM",
+      },
+      
+      "imageUrl": "https://egyptianstreets.com/wp-content/uploads/2020/10/79367016_1017878288546161_581926600698757120_o.jpg",
+    }
+    ]`
