@@ -21,9 +21,7 @@ class RecomndedSpacesCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        
-        
+      
 
     }
     override func layoutSubviews() {

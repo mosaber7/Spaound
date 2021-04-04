@@ -42,12 +42,12 @@ class PopularSpacesTableViewCell: UITableViewCell {
         cellContainerView.layer.borderWidth = 1
         cellContainerView.layer.borderColor = UIColor.lightGray.cgColor
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 4, left: 0, bottom: 4, right: 0))
- 
-       
-        
 
     }
+    
+    
     func Config(){
+        
         nameLabel.text = space.name
         adressLabel.text = space.address
         priceLabel.text = String(space.price)
@@ -55,6 +55,7 @@ class PopularSpacesTableViewCell: UITableViewCell {
         
         spinner.isHidden = false
         spinner.startAnimating()
+        
         if let imageURL = URL(string: space.imageUrl)
         {
             spaceImageView.kf.setImage(with: imageURL)
@@ -62,7 +63,6 @@ class PopularSpacesTableViewCell: UITableViewCell {
             spinner.stopAnimating()
             
         }
-        
         
         if let originalPrice = space.beforeDiscountPrice{
             beforeDiscountPriceLabel.text = String(originalPrice)

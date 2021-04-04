@@ -29,6 +29,8 @@
 		05374D0E260A35F60046E284 /* AvailabilityTimes.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05374D0C260A35F60046E284 /* AvailabilityTimes.xib */; };
 		05374D12260A37F60046E284 /* ContactInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05374D10260A37F60046E284 /* ContactInfoCell.swift */; };
 		05374D13260A37F60046E284 /* ContactInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05374D11260A37F60046E284 /* ContactInfoCell.xib */; };
+		055CF455261A75810037320C /* Amenities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055CF454261A75810037320C /* Amenities.swift */; };
+		055CF458261A75A10037320C /* AvailabiltyTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055CF457261A75A10037320C /* AvailabiltyTimes.swift */; };
 		057597EC25F57DDF0029E2B3 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057597EB25F57DDF0029E2B3 /* LoginFormViewController.swift */; };
 		057597EF25F580ED0029E2B3 /* RegisterFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057597EE25F580ED0029E2B3 /* RegisterFormViewController.swift */; };
 		057597F225F583390029E2B3 /* VerifyPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057597F125F583390029E2B3 /* VerifyPhoneViewController.swift */; };
@@ -73,6 +75,8 @@
 		05374D0C260A35F60046E284 /* AvailabilityTimes.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailabilityTimes.xib; sourceTree = "<group>"; };
 		05374D10260A37F60046E284 /* ContactInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoCell.swift; sourceTree = "<group>"; };
 		05374D11260A37F60046E284 /* ContactInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactInfoCell.xib; sourceTree = "<group>"; };
+		055CF454261A75810037320C /* Amenities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amenities.swift; sourceTree = "<group>"; };
+		055CF457261A75A10037320C /* AvailabiltyTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailabiltyTimes.swift; sourceTree = "<group>"; };
 		057597EB25F57DDF0029E2B3 /* LoginFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
 		057597EE25F580ED0029E2B3 /* RegisterFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormViewController.swift; sourceTree = "<group>"; };
 		057597F125F583390029E2B3 /* VerifyPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 			children = (
 				0512904D25F51F8D00681273 /* StartCell.swift */,
 				053635C925FBA68900DBF135 /* Space.swift */,
+				055CF454261A75810037320C /* Amenities.swift */,
+				055CF457261A75A10037320C /* AvailabiltyTimes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -440,8 +446,10 @@
 				05374D03260A31B30046E284 /* AmenitiesCell.swift in Sources */,
 				05A2EEB525F4EDEB008BEE2F /* OnBoardingViewController.swift in Sources */,
 				05A1FA13260BB71C00AC74DB /* WebServices.swift in Sources */,
+				055CF455261A75810037320C /* Amenities.swift in Sources */,
 				05374D12260A37F60046E284 /* ContactInfoCell.swift in Sources */,
 				05A2EEB125F4EDEB008BEE2F /* AppDelegate.swift in Sources */,
+				055CF458261A75A10037320C /* AvailabiltyTimes.swift in Sources */,
 				05A2EEB325F4EDEB008BEE2F /* SceneDelegate.swift in Sources */,
 				0536358F25FA776200DBF135 /* UITableView+Extinsion.swift in Sources */,
 				053635B325FB808B00DBF135 /* PopularSpacesTableViewCell.swift in Sources */,

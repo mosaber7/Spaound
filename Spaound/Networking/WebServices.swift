@@ -13,8 +13,8 @@ class WebServices: NSObject {
     private override init() {
         
     }
-
-       func getJson(completion: @escaping (Result<[Space], ErrorMessage>)-> Void){
+    
+    func getJson(completion: @escaping (Result<[Space], Error>)-> Void){
         guard let url = URL(string: "http://localhost:3000/spaces/") else{
             return
         }
@@ -22,10 +22,9 @@ class WebServices: NSObject {
             switch response.result{
             
             case .success(let spaces):
-                    completion(.success(spaces))
-            case .failure(_):
-                    completion(.failure(.invaildResponse))
-                    
+                completion(.success(spaces))
+            case .failure(let error):
+                completion(.failure(error))
             }
             
         }

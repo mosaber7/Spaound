@@ -15,7 +15,6 @@ class PopularSpacesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
         tableView.registerNib(cell: PopularSpacesTableViewCell.self)
         tableView.delegate = self
         tableView.dataSource = self

@@ -53,21 +53,5 @@ struct Space: Codable {
     var imageUrl: String
     
 }
-public struct Amenities:Codable {
-     
-     var freeWifi: Bool
-     var libraryBook: Bool
-     var gamesRoom: Bool
-     var Coffee: Bool
-     var meetingRoom: Bool
- }
 
-struct AvailabiltyTimes: Codable {
-     var saturday: String
-     var sunday: String
-     var monday: String
-     var tuesday: String
-     var wednseday: String
-     var thurseday: String
-     var friday: String
- }
+

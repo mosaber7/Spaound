@@ -20,11 +20,14 @@ class HomeViewController: UIViewController {
         registerLabel.isUserInteractionEnabled = true
         registerLabel.addGestureRecognizer(tap)
             }
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
         loginButton.layer.cornerRadius = 16
     }
+    
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if Core.shared.isNewUser(){

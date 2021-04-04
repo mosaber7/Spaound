@@ -27,37 +27,29 @@ class RegisterFormViewController: UIViewController {
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+        applyCornerRadius()
+        
+    }
+    
+    
+    func applyCornerRadius(){
         continueButton.layer.cornerRadius = 16
         usernameContainer.layer.cornerRadius = 16
         emailContainer.layer.cornerRadius = 16
         phoneContainer.layer.cornerRadius = 16
         passwordContainer.layer.cornerRadius = 16
-        
     }
     
-    
-    
-    @IBAction func backButtonTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-        
-    }
-    
-    @IBAction func continueButtonTapped(_ sender: Any) {
-        
-        
-        guard let username = usernameTextField.text,username != "", let email = emailTextField.text, email != "", let phoneNumber = phoneTextField.text, phoneNumber != "", let password = passwordTextField.text, password != "" else {
-            showAlert(message: "please fill out all the fields")
-            return
-        }
-        if !isValidEmailAddress(emailAddressString: email){
-            showAlert(message: "please insert a valid mail form: mo@example.com")
-        }
-        
+    func startSpinner(){
         continueButton.isHidden = true
         continueButton.isUserInteractionEnabled = false
         spinner.isHidden = false
         spinner.startAnimating()
         
+    }
+    
+    
+    func createUser(email: String, password: String, username: String, phoneNumber: String){
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
                 self.continueButton.isHidden = false
@@ -80,12 +72,42 @@ class RegisterFormViewController: UIViewController {
             
         }
         
+    }
+    
+    
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        
+    }
+    
+    @IBAction func continueButtonTapped(_ sender: Any) {
+        
+        
+        guard let username = usernameTextField.text,username != "", let email = emailTextField.text, email != "", let phoneNumber = phoneTextField.text, phoneNumber != "", let password = passwordTextField.text, password != "" else {
+            showAlert(message: "please fill out all the fields")
+            return
+        }
+        if !isValidEmailAddress(emailAddressString: email){
+            showAlert(message: "please insert a valid mail form: mo@example.com")
+        }
+        
+        startSpinner()
+        createUser(email: email, password: password, username: username, phoneNumber: phoneNumber)
+        
         
         guard let verfiyPhoneVC = self.storyboard?.instantiateViewController(identifier: "VerifyPhoneForm") as? VerifyPhoneViewController else{
             fatalError("Can't find VerifyPhoneForm")
         }
         
-        navigationController?.pushViewController(verfiyPhoneVC, animated: true)    }
+        navigationController?.pushViewController(verfiyPhoneVC, animated: true)
+        
+    }
+    
+    
+    
+    
+    
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -119,26 +141,26 @@ extension RegisterFormViewController{
     }
     
     func isValidEmailAddress(emailAddressString: String) -> Bool {
-      
-      var returnValue = true
-      let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
-      
-      do {
-          let regex = try NSRegularExpression(pattern: emailRegEx)
-          let nsString = emailAddressString as NSString
-          let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
-          
-          if results.count == 0
-          {
-              returnValue = false
-          }
-          
-      } catch let error as NSError {
-          print("invalid regex: \(error.localizedDescription)")
-          returnValue = false
-      }
-      
-      return  returnValue
-  }
+        
+        var returnValue = true
+        let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+        
+        do {
+            let regex = try NSRegularExpression(pattern: emailRegEx)
+            let nsString = emailAddressString as NSString
+            let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+            
+            if results.count == 0
+            {
+                returnValue = false
+            }
+            
+        } catch let error as NSError {
+            print("invalid regex: \(error.localizedDescription)")
+            returnValue = false
+        }
+        
+        return  returnValue
+    }
     
 }
