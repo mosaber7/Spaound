@@ -93,7 +93,7 @@ Created by [@mosaber](https://www.linkedin.com/in/mohamed-saber-fares/) - feel f
         "wednseday":"7:00 AM - 12:00 AM",
         "thurseday":"6:00 AM - 12:00 AM",
         "friday":"2:00 AM - 12:00 AM",
-      },
+      },`
       
       "imageUrl": "https://egyptianstreets.com/wp-content/uploads/2020/10/79367016_1017878288546161_581926600698757120_o.jpg",
     }
