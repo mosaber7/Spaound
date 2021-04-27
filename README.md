@@ -1,7 +1,7 @@
 # Spaound
 
 
-> Find Co-Working spaces has become an easy task with us. Spaound helps you find the Co-Working spaces near you!
+> Finding Co-Working spaces has become an easy task with us. Spaound helps you find the Co-Working spaces near you!
 
 ## Table of contents
 * [General info](#general-info)
